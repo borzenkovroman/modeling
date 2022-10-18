@@ -1,0 +1,112 @@
+$default: #303030;
+$white: #fff;
+$accent: #8C8C8C;
+
+
+
+%helvetica-300 {
+  font-family: 'HelveticaNeueCyr-Light',
+  sans-serif;
+  font-weight: 300;
+}
+
+%helvetica-300italic {
+  font-family: 'HelveticaNeueCyr-LightItalic',
+  sans-serif;
+  font-weight: 300;
+}
+
+%helvetica-400 {
+  font-family: 'HelveticaNeueCyr-Roman',
+  sans-serif;
+  font-weight: 400;
+}
+
+%helvetica-550 {
+  font-family: 'HelveticaNeueCyr-Medium',
+  sans-serif;
+  font-weight: 550;
+}
+
+%helvetica-700 {
+  font-family: 'HelveticaNeueCyr-BoldItalic',
+  sans-serif;
+  font-weight: 700;
+}
+
+%btn-main {
+  background-color: $default;
+  padding: 26px 50px;
+  @extend %helvetica-550;
+  color: $white;
+  box-shadow: -11px -11px rgba(255, 255, 255, 0.9), -12px -12px rgba(48, 48, 48, 0.5);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.215);
+    box-shadow: none;
+    outline: 1px solid $default;
+    color: $default;
+  }
+
+  &:active {
+    background-color: rgba(174, 174, 174, 0.5);
+    outline: 1px solid $default;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: -11px -11px rgba(255, 255, 255, 0.9),
+    -12px -12px rgba(48, 48, 48, 0.5);
+    background-color: rgba(255, 255, 255, 0.215);
+    color: $default;
+    outline: 1px solid $default;
+    outline-offset: 6px;
+  }
+
+  .btn-main__text {
+    position: relative;
+
+    &::after {
+      content: '';
+      background-image: url('../images/icons/arrow-right.svg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      right: -18px;
+      transform: translateY(-50%);
+      width: 13px;
+      height: 8px;
+    }
+  }
+}
+
+%btn-secondary {
+  background-color: none;
+  border: 1px solid $default;
+  padding: 26px 50px;
+
+  &:hover {
+    background-color: $default;
+    padding: 26px 50px;
+    color: $white;
+    box-shadow: -11px -11px rgba(255, 255, 255, 0.9),
+    -12px -12px rgba(48, 48, 48, 0.5);
+  }
+
+  &:active {
+    box-shadow: -11px -11px rgba(255, 255, 255, 0.9),
+    -12px -12px rgba(48, 48, 48, 0.5);
+    color: $default;
+    outline: 1px solid $default;
+    outline-offset: 6px;
+  }
+
+  &:focus {
+    background-color: rgba(174, 174, 174, 0.5);
+    outline: 1px solid $default;
+    color: $white;
+  }
+}
+

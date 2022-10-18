@@ -45,23 +45,25 @@ svg {
   display: block;
 }
 
+a,
+svg,
 input,
 button,
 textarea,
 select {
   border: none;
   font: inherit;
+  cursor: pointer;
 }
 
 button {
   border: none;
-  cursor: pointer;
   background-color: transparent;
   padding: 0;
 }
 
 a {
   text-decoration: none;
-  color: #242121;
+  color: $default;
   transition: all 0.5s;
 }
