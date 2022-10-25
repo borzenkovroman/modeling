@@ -1,0 +1,230 @@
+.hero {
+  padding: 40px 0 100px;
+
+  .menu {
+    margin-bottom: 131px;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &:active {
+        opacity: 1;
+      }
+
+      &:focus {
+        outline: 1px solid $default;
+        outline-offset: 6px;
+      }
+    }
+
+    &__inner {
+      display: flex;
+    }
+
+    &__list {
+      margin-right: 114px;
+      display: flex;
+    }
+
+    &__item {
+      @extend %helvetica-400;
+      font-weight: 400;
+      font-size: 15px;
+      text-transform: uppercase;
+
+      &:not(:last-child) {
+        margin-right: 34px;
+      }
+    }
+
+    &__link {
+      background-image: linear-gradient(to right,
+          $accent,
+          $accent 50%,
+          $default 50%);
+      background-size: 200% 100%;
+      background-position: -100%;
+      display: inline-block;
+      position: relative;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;
+
+      &:after {
+        content: '';
+        background: $accent;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+      &:hover {
+        background-position: 0;
+      }
+
+      &:active {
+        background-image: linear-gradient(to left,
+            $default,
+            $default 50%,
+            $accent 50%);
+        background-size: 200% 100%;
+        background-position: -100%;
+        display: inline-block;
+        padding: 5px 0;
+        position: relative;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:active::after {
+        background: $default;
+      }
+
+      &:focus {
+        outline: 1px solid $default;
+        outline-offset: 6px;
+      }
+    }
+
+    &__contact {
+      @extend %helvetica-550;
+      position: relative;
+      font-size: 18px;
+
+      &:hover {
+        transform: scale(1.2);
+        color: $accent;
+      }
+
+      &:active {
+        transform: scale(1.2);
+        color: $default;
+      }
+
+      &::after {
+        content: '';
+        background-image: url('../images/icons/tel.svg');
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -30px;
+        display: none;
+      }
+
+      &:active::after {
+        display: block;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        color: $accent;
+      }
+
+      &:focus {
+        outline: 1px solid $default;
+        outline-offset: 6px;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+
+    &::before {
+      content: '';
+      background-image: url('../images/3d.png');
+      background-size: contain;
+      background-position: center left;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 663px;
+      height: 493px;
+      display: block;
+      top: 50%;
+      left: -9%;
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+
+    &::after {
+      content: '';
+      background-image: url('../images/hero-bg.png');
+      background-size: cover;
+      background-position: center left;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 663px;
+      height: 493px;
+      display: block;
+      top: 50%;
+      left: -2%;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+  }
+
+  &__inner {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 80px;
+  }
+
+  &__list {
+    padding-right: 39px;
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+
+    &::after {
+      content: '';
+      background-image: url('../images/icons/portal.svg');
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      right: -24px;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

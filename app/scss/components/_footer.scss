@@ -1,0 +1,150 @@
+.footer {
+  padding: 57px 0 57px;
+  background-color: $default;
+  color: $white;
+  
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &:active {
+        opacity: 1;
+      }
+
+      &:focus {
+        outline: 1px solid $default;
+        outline-offset: 6px;
+      }
+    }
+
+    &__inner {
+      display: flex;
+    }
+
+    &__list {
+      margin-right: 110px;
+      display: flex;
+    }
+
+    &__item {
+      font-weight: 400;
+      font-size: 15px;
+      text-transform: uppercase;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    &__link {
+      background-image: linear-gradient(to right,
+          $accent,
+          $accent 50%,
+          $white 50%);
+      background-size: 200% 100%;
+      background-position: -100%;
+      display: inline-block;
+      font-size: 15px;
+      position: relative;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;
+
+      &:after {
+        content: '';
+        background: $accent;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+      &:hover {
+        background-position: 0;
+      }
+
+      &:active {
+        background-image: linear-gradient(to left,
+            $default,
+            $default 50%,
+            $accent 50%);
+        background-size: 200% 100%;
+        background-position: -100%;
+        display: inline-block;
+        padding: 5px 0;
+        position: relative;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:active::after {
+        background: $default;
+      }
+
+      &:focus {
+        outline: 1px solid $default;
+        outline-offset: 6px;
+      }
+    }
+
+    &__contact {
+      @extend %helvetica-550;
+      position: relative;
+      color: $white;
+
+      &:hover {
+        transform: scale(1.2);
+        color: $accent;
+      }
+
+      &:active {
+        transform: scale(1.2);
+        color: $default;
+      }
+
+      &::after {
+        content: '';
+        background-image: url('../images/icons/tel.svg');
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -30px;
+        display: none;
+      }
+
+      &:active::after {
+        display: block;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        color: $accent;
+      }
+
+      &:focus {
+        outline: 1px solid $white;
+        outline-offset: 6px;
+      }
+    }
+  }
+}
