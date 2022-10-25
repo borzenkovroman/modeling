@@ -1,0 +1,115 @@
+.about {
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    margin-right: 40px;
+    align-self: flex-start;
+    display: block;
+    font-size: 80px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 0.00em; 
+  }
+
+  &__inner {
+    margin-bottom: 63px;
+  }
+
+  &__subtitle {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+    font-size: 50px;
+    letter-spacing: 0.05em;
+  }
+
+  &__text {
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+
+    &-wrapper {
+      max-width: 362px;
+    }
+  }
+
+  &__img {
+    align-self: center;
+    width: 459px;
+    height: 405px;
+    position: relative;
+    right: 14%;
+    bottom: 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &::after {
+      content: '';
+      background-image: url('../images/about/net.png');
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      right: -15%;
+      bottom: -15%;
+      width: 402px;
+      height: 402px;
+      display: block;
+      z-index: -1;
+    }
+  }
+
+  &__info {
+
+    &-list {
+      padding-left: 100px;
+    }
+
+    &-item {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -106px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 6px;
+        background-color: #404040;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: -94px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 89px;
+        height: 1px;
+        background: linear-gradient(90deg, rgb(174, 174, 174) 50%, rgba(0, 0, 0, 0) 100%);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+}

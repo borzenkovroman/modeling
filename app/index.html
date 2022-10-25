@@ -10,45 +10,45 @@
 </head>
 
 <body>
-  <header class="header">
+  <section class="hero" id="home">
     <div class="container">
-      <nav class="menu">
-        <a class="logo" href="#home">
-          <img src="images/logo.png" alt="company logo" width="110" height="27">
-        </a>
-
-        <div class="menu__inner">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#" >
-                Our work
-              </a> 
-            </li>
-  
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Services and prices
-              </a>
-            </li>
-  
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Contacts
-              </a>
-            </li>
-          </ul>
-  
-          <a class="animate__animated animate__heartBeat menu__contact" href="tel:+79878373829">
-            +7 (987) 837-38-29
+      <header class="header">
+        <nav class="menu">
+          <a class="logo" href="#home">
+            <img src="images/logo.png" alt="company logo" width="110" height="27">
           </a>
-        </div>
-      </nav>
 
-      <div class="header__content">
-        <img class="header__img" src="images/header-bg.png" alt="">
+          <div class="menu__inner">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#product">
+                  Our work
+                </a> 
+              </li>
+    
+              <li class="menu__item">
+                <a class="menu__link" href="#prises">
+                  Services and prices
+                </a>
+              </li>
+    
+              <li class="menu__item">
+                <a class="menu__link" href="#contact">
+                  Contacts
+                </a>
+              </li>
+            </ul>
+    
+            <a class="animate__animated animate__heartBeat menu__contact" href="tel:+79878373829">
+              +7 (987) 837-38-29
+            </a>
+          </div>
+        </nav>
+      </header>
 
-        <div class="header__inner">
-          <h1 class="title header__title">
+      <div class="hero__content">
+        <div class="hero__inner">
+          <h1 class="title hero__title">
             <span class="title--accent">
               modeling
             </span>
@@ -62,21 +62,21 @@
             </span>
           </h1>
 
-          <ul class="header__list">
-            <li class="header__item">
-              <p class="header__item-text">
+          <ul class="hero__list">
+            <li class="hero__item">
+              <p class="hero__item-text">
                 Modeling and product visualization
               </p> 
             </li>
 
-            <li class="header__item">
-              <p class="header__item-text">
+            <li class="hero__item">
+              <p class="hero__item-text">
                 Photorealistic package visualisation
               </p>
             </li>
 
-            <li class="header__item">
-              <p class="header__item-text">
+            <li class="hero__item">
+              <p class="hero__item-text">
                 CGI animation for presentations and ads
               </p>
             </li>
@@ -90,7 +90,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </section>
 
   <main class="main">
     <section class="about">
@@ -112,23 +112,19 @@
                 </span>
               </h3>          
       
-              <ul class="about__text-list">
-                <li class="about__text-item">
-                  <p>
-                    We help clients all over the world to create
-                    photo-realistic 3d product images
-                    and animations for e-commerce, presentations
-                    and marketing.
-                  </p>
-                </li>
-      
-                <li class="about__text-item">
-                  <p>
-                    We can create any virtual objects in static
-                    and motion to solve your business tasks.
-                  </p>
-                </li>
-              </ul>
+              <div class="about__text-wrapper">
+                <p class="about__text">
+                  We help clients all over the world to create
+                  photo-realistic 3d product images
+                  and animations for e-commerce, presentations
+                  and marketing.
+                </p>
+
+                <p class="about__text">
+                  We can create any virtual objects in static
+                  and motion to solve your business tasks.
+                </p>  
+              </div>
             </div>
 
             <ul class="about__info-list">
@@ -165,7 +161,7 @@
       </div>
     </section>
 
-    <section class="product">
+    <section class="product" id="product">
       <div class="container">
         <h3 class="product__title title">
           <span class="title--accent">
@@ -242,7 +238,604 @@
         </div>
       </div>
     </section>
+
+    <section class="blog">
+      <div class="container">
+        <div class="blog__wrapper">
+          <div class="blog__inner">
+            <h3 class="blog__title title">
+              <span class="title--accent">
+                3d product
+              </span>
+
+              <span class="title--default">
+                rendering
+              </span>
+            </h3>
+
+            <ul class="blog__info blog__info--medium">
+              <li class="blog__info-item">
+                <p class="blog__info-text">
+                  Do you want to get an exact 3D copy or individual images
+                  of your product to show on your website?
+                </p>
+              </li>
+
+              <li class="blog__info-item">
+                <p class="blog__info-text">
+                  Or maybe you need to show customers and investors a product
+                  that is currently under development? The possibilities of 3D
+                  product visualization are endless
+                </p>
+              </li>
+            </ul>
+
+            <button class="blog__btn btn-main" type="button">
+              <span class="btn-main__text">
+                prices
+              </span>
+            </button>
+
+            <blockquote class="blockquote">
+              <cite class="blockquote__cite">
+                It will be enough for us to get your 3D CAD files,
+                but if you don't have them, you can use drawings,
+                photos or just ideas in your head.
+              </cite>
+            </blockquote>
+          </div>
+
+          <div class="blog__carousel blog__carousel--product">
+            <div class="blog__carousel-item" style="background-image: url('../images/carousel/compressor-front.jpg');" width="520" height="520">
+            </div>
+
+
+            <div class="blog__carousel-item" style="background-image: url('../images/carousel/engine.jpg');" width="520" height="520">
+            </div>
+
+            <div class="blog__carousel-item" style="background-image: url('../images/carousel/air-gun.jpg');" width="520" height="520">
+            </div>
+
+            <div class="blog__carousel-item" style="background-image: url('../images/carousel/cooler.jpg');" width="520" height="520">
+            </div>
+
+            <div class="blog__carousel-item" style="background-image: url('../images/carousel/compressor-back.jpg');" width="520" height="520">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog">
+      <div class="container">
+        <div class="blog__wrapper">
+          <div class="blog__inner">
+            <h3 class="blog__title title">
+              <span class="title--accent">
+                3d package
+              </span>
+
+              <span class="title--default">
+                rendering
+              </span>
+            </h3>
+
+            <ul class="blog__info blog__info--large">
+              <li class="blog__info-item">
+                <p class="blog__info-text">
+                  Get photorealistic images of your product packaging for eCommerce,
+                  trade-show banners, magazines, and much more.
+                  <p>
+                    We can use your 2D label artwork files to quickly create high-quality
+                  and accurate renderings of your product, ready for publication.
+                  </p>
+                </p>
+              </li>
+
+              <li class="blog__info-item">
+                <p class="blog__info-text">
+                  Overpriced photo shoots of your product packaging for advertising
+                  and e-commerce are no longer necessary.
+                </p>
+              </li>
+            </ul>
+
+            <button class="blog__btn btn-main" type="button">
+              <span class="btn-main__text">
+                prices
+              </span>
+            </button>
+
+            <blockquote class="blog__blockquote blockquote">
+              <cite class="blockquote__cite">
+                Images of your product can be presented
+                in a particular environment, in progress,
+                or in section.
+              </cite>
+            </blockquote>
+          </div>
+
+          <div class="blog__carousel blog__carousel--package">
+            <div class="blog__carousel-item" style="background-image: url('../images/carousel/capacin-main.jpg');"
+              width="520" height="520">
+            </div>
+
+            <div class="blog__carousel-item" style="background-image: url('../images/carousel/capacin-top.jpg');"
+              width="520"
+              height="520">
+            </div>
+
+            <div class="blog__carousel-item" style="background-image: url('../images/carousel/capacin-bottom.jpg');"
+              width="520" height="520">
+            </div>
+
+            <div class="blog__carousel-item" style="background-image: url('../images/carousel/capacin-main.jpg');"
+              width="520" height="520">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog">
+      <div class="container">
+        <div class="blog__wrapper">
+          <div class="blog__inner">
+            <h3 class="blog__title title">
+              <span class="title--accent">
+                3d product
+              </span>
+
+              <span class="title--default">
+                animation
+              </span>
+            </h3>
+
+            <ul class="blog__info blog__info--medium">
+              <li class="blog__info-item">
+                <p class="blog__info-text">
+                  3D product animation creates new possibilities for showing
+                  your product. For example, you can give an interesting insight into
+                  the inner workings of very complex machines or technical systems.
+                </p>
+              </li>
+
+              <li class="blog__info-item">
+                <p class="blog__info-text">
+                  Alone or accompanied by music, 3D animation always
+                  attracts attention.
+                </p>
+              </li>
+            </ul>
+
+            <button class="blog__btn btn-main" type="button">
+              <span class="btn-main__text">
+                prices
+              </span>
+            </button>
+
+            <blockquote class="blockquote blockquote--large">
+              <cite class="blockquote__cite">
+                Step by step we will help you from the script
+                creation to the finished video.
+              </cite>
+            </blockquote>
+          </div>
+
+          <div class="blog__video">
+            <a data-fancybox class="blog__video-link" href="https://www.youtube.com/watch?v=MUOV0dp2eqo&t=4s"
+              style="background-image: url('../images/video/watch.jpg');">
+              <button class="blog__video-popup" type="button" style="background-image: url('../images/video/popup.svg');">
+                
+              </button>
+            </a>  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="prises" id="prises">
+      <div class="container">
+        <h3 class="prises__title title">
+          <span class="title--accent">
+            our
+          </span>
+
+          <span class="title--default">
+            prises
+          </span>
+        </h3>
+
+        <ul class="prises__inner">
+          <li class="prises__item">
+            <img class="prises__img" src="images/prises/compressor.jpg" alt="image of compressor as an example of 3d product rendering">
+
+            <h4 class="prises__item-title title">
+              3d product rendering
+            </h4>
+
+            <ul class="prises__list">
+              <li class="prises__list-item">
+                <p class="prises__list-text">
+                  3D models creation based
+                on drawings
+                </p>
+              </li>
+
+              <li class="prises__list-item">
+                <p class="prises__list-text">
+                  Creation of 3D models from photos
+                  and sketches
+                </p>
+              </li>
+
+              <li class="prises__list-item">
+                <p class="prises__list-text">
+                  Processing of scan results
+                </p>
+              </li>
+
+              <li class="prises__list-item">
+                <p class="prises__list-text">
+                  Preparing your model for 3D printing
+                </p>
+              </li>
+            </ul>
+
+            <div class="prises__bottom">
+              <span class="prises__price prises__price--up">
+                <span class="prises__num">
+                  700
+                </span>
+
+                <span class="prises__currency">
+                  $
+                </span>
+              </span>
+
+              <button class="prises__btn btn-main">
+                <span class="prises__btn-text btn-main__text">
+                  Contact us
+                </span>
+
+                <svg class="prises__btn-arrow" width="14" height="9" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </li>
+
+          <li class="prises__item">
+            <img class="prises__img" src="images/prises/capsaicin.jpg"
+              alt="image of compressor as an example of 3d product package">
+
+            <h4 class="prises__item-title title">
+              3d package rendering
+            </h4>
+
+            <ul class="prises__list">
+              <li class="prises__list-item">
+                <p class="prises__list-text">
+                  3D models creation based
+                on drawings
+                </p>
+              </li>
+
+              <li class="prises__list-item">
+                <p class="prises__list-text">
+                  Creation of 3D models from photos
+                and sketches
+                </p>
+              </li>
+
+              <li class="prises__list-item">
+                <p class="prises__list-text">
+                  Preparation of banners and images
+                </p>
+              </li>
+
+              <li class="prises__list-item">
+                <p class="prises__list-text">
+                  Variable material and color options
+                </p>
+              </li>
+            </ul>
+
+            <div class="prises__bottom">
+              <span class="prises__price prises__price--up">
+                <span class="prises__num">
+                  600
+                </span>
+
+                <span class="prises__currency">
+                  $
+                </span>
+              </span>
+
+              <button class="prises__btn btn-main">
+                <span class="prises__btn-text btn-main__text">
+                  Contact us
+                </span>
+                
+                <svg class="prises__btn-arrow" width="14" height="9" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z" />
+                </svg>
+              </button>
+            </div>
+          </li>
+
+          <li class="prises__item">
+            <img class="prises__img" src="images/prises/watch.jpg"
+              alt="image of compressor as an example of 3d product animation">
+
+            <h4 class="prises__item-title title">
+              3d product animation
+            </h4>
+
+            <ul class="prises__list">
+              <li class="prises__list-item">
+                <p class="prises__list-text">
+                  3D models creation
+                </p>
+              </li>
+
+              <li class="prises__list-item">
+                <p class="prises__list-text">
+                  Creation of the environment
+                and materials
+                </p>
+              </li>
+
+              <li class="prises__list-item">
+                <p class="prises__list-text">
+                  Storyboard
+                </p>
+              </li>
+
+              <li class="prises__list-item">
+                <p class="prises__list-text">
+                  Sound design
+                </p>
+              </li>
+            </ul>
+
+            <div class="prises__bottom">
+              <span class="prises__price prises__price--up prises__price--bottom">
+                <span class="prises__num">
+                  3000
+                </span>
+
+                <span class="prises__currency">
+                  $
+                </span>
+              </span>
+
+              <button class="prises__btn btn-main">
+                <span class="prises__btn-text btn-main__text">
+                  Contact us
+                </span>
+
+                <svg class="prises__btn-arrow" width="14" height="9" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z" />
+                </svg>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="team">
+      <div class="container">
+        <h3 class="team__title title">
+          <span class="title--accent">
+            the pro-3d
+          </span>
+
+          <span class="title--default">
+            team
+          </span>
+        </h3>
+
+        <ul class="team__list">
+          <li class="team__item">
+            <img class="team__item-img" src="images/team/member-unknown.png" alt="photo of the team member" width="222" height="230">
+
+            <h4 class="team__item-title">
+              Cyril Genba
+
+              <span class="team__item-subtitle">
+                cmo
+              </span>
+            </h4>
+          </li>
+
+          <li class="team__item">
+            <img class="team__item-img" src="images/team/member-unknown.png" alt="photo of the team member" width="222" height="230">
+
+            <h4 class="team__item-title">
+              Yulia Volynskova
+
+              <span class="team__item-subtitle">
+                cpo
+              </span>
+            </h4>
+          </li>
+
+          <li class="team__item">
+            <img class="team__item-img" src="images/team/member-unknown.png" alt="photo of the team member" width="222" height="230">
+
+            <h4 class="team__item-title">
+              Max Volynsckov
+
+              <span class="team__item-subtitle">
+                ceo
+              </span>
+            </h4>
+          </li>
+
+          <li class="team__item">
+            <img class="team__item-img" src="images/team/member-unknown.png" alt="photo of the team member" width="222" height="230">
+
+            <h4 class="team__item-title">
+              Apas Yancauscas
+
+              <span class="team__item-subtitle">
+                Chief 3D designer
+              </span>
+            </h4>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="priority">
+      <div class="container">
+        <h3 class="priority__title title">
+          <span class="title--accent">
+            Our
+          </span>  
+
+          <span class="title--default">
+            priority
+          </span>
+        </h3>
+
+        <div class="priority__wrapper">
+          <div class="priority__inner">
+            <blockquote class="blockquote priority__blockquote">
+              <cite class="blockquote__cite priority__cite">
+                is to turn a good working relationship into
+                a long-term collaboration!
+              </cite>
+            </blockquote>
+
+            <h4 class="priority__contact-title">
+              contacts:
+            </h4>
+
+            <ul class="priority__contact-inner">
+              <li class="priority__contact-item">
+                <a class="priority__contact-link" href="tel:+79878373829">
+                  <svg class="priority__contact-icon" width="18" height="18">
+                    <use xlink:href="images/icons/sprite.svg#contact-tel"></use>
+                  </svg>
+
+                  +7 (987) 837-38-29
+                </a>
+              </li>
+
+              <li class="priority__contact-item">
+                <a class="priority__contact-link" href="mailto:Info@produt3d.pro">
+                  <svg class="priority__contact-icon" width="19" height="14">
+                    <use xlink:href="images/icons/sprite.svg#contact-mail"></use>
+                  </svg>
+
+                  Info@produt3d.pro
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="priority__img-wrapper">
+            <img class="priority__img" src="images/priority/priority.jpg" alt="working process" width="448" height="329">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h3 class="contact__title title">
+          <span class="title--accent">
+            contact us
+          </span>
+
+          <span class="title--default">
+            to discuss your
+            project
+          </span> 
+        </h3>
+
+        <div class="contact__wrapper">
+          <form class="contact__form">
+            <label class="contact__label">
+              <input class="contact__input" type="text" placeholder="Name">
+            </label>
+
+            <label class="contact__label">
+              <input class="contact__input" type="email" placeholder="Email">
+            </label>
+
+            <label class="contact__label">
+              <input class="contact__input" type="number" placeholder="Phone">
+            </label>
+            
+            <textarea class="contact__textarea" type="text" placeholder="Describe your project"></textarea>
+
+            <button class="contact__form-btn btn-main" type="submit">
+              <span class="btn-main__text">
+                Contact us
+              </span>
+            </button>
+          </form>
+
+
+          <div class="contact__inner">
+            <blockquote class="blockquote contact__blockquote">
+              <cite class="blockquote__cite contact__cite">
+                Book a free video-consultation
+              </cite>
+            </blockquote>
+
+            <button class="btn-secondary" type="button">
+              Schedule
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <nav class="menu">
+        <a class="logo" href="#home">
+          <img src="images/logo-white.png" alt="company logo" width="110" height="27">
+        </a>
+
+        <div class="menu__inner">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Our work
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Services and prices
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Contacts
+              </a>
+            </li>
+          </ul>
+
+          <a class="animate__animated animate__heartBeat menu__contact" href="tel:+79878373829">
+            +7 (987) 837-38-29
+          </a>
+        </div>
+      </nav>
+    </div>
+  </footer>
 
   <script src="js/main.min.js"></script>
 </body>

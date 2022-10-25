@@ -1,4 +1,13 @@
 @font-face {
+  font-family: 'HelveticaNeueCyr-Thin';
+  font-style: thin;
+  font-weight: 100;
+  src: local('HelveticaNeueCyr-Thin'),
+    url('../fonts/HelveticaNeueCyr-Thin.ttf') format('ttf');
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'HelveticaNeueCyr-Light';
   font-style: normal;
   font-weight: 300;
