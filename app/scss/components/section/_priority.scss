@@ -48,11 +48,13 @@
       }
 
       &:active {
-
+        background-color: $accent;
+        color: $white;
       }
-
+      
       &:focus {
-
+        outline: 1px solid $accent;
+        outline-offset: 6px;
       }
     }
 

@@ -40,6 +40,25 @@
     }
   }
 
+  &__input,
+  &__textarea {
+    color: $default;
+
+    &:hover {
+      outline: 2px solid $accent;
+    }
+
+    &:active {
+      background-color: $accent;
+      color: $white;
+    }
+
+    &:focus {
+      outline: 3px double $accent;
+      border-radius: 8px;
+    }
+  }
+
   &__textarea {
     text-transform: none;
     resize: none;
