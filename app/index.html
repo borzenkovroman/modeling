@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>modeling | rendering | animation</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -14,8 +13,13 @@
     <div class="container">
       <header class="header">
         <nav class="menu">
+          <button class="menu__btn" type="button">
+            <span class="menu__line"></span>
+            <span class="sr-only">open main menu</span>
+          </button>
+
           <a class="logo" href="#home">
-            <img src="images/logo.png" alt="company logo" width="110" height="27">
+            <img src="images/logo.svg" alt="company logo" width="110" height="27">
           </a>
 
           <div class="menu__inner">
@@ -39,7 +43,7 @@
               </li>
             </ul>
     
-            <a class="animate__animated animate__heartBeat menu__contact" href="tel:+79878373829">
+            <a class="menu__contact" href="tel:+79878373829">
               +7 (987) 837-38-29
             </a>
           </div>
@@ -49,43 +53,35 @@
       <div class="hero__content">
         <div class="hero__inner">
           <h1 class="title hero__title">
-            <span class="title--accent">
               modeling
-            </span>
 
             <span class="title--default">
               rendering
             </span>
 
-            <span class="title--accent">
-              animation
-            </span>
+            animation
           </h1>
 
           <ul class="hero__list">
             <li class="hero__item">
-              <p class="hero__item-text">
-                Modeling and product visualization
-              </p> 
+              Modeling and product visualization
             </li>
 
             <li class="hero__item">
-              <p class="hero__item-text">
-                Photorealistic package visualisation
-              </p>
+              Photorealistic package visualisation
             </li>
 
             <li class="hero__item">
-              <p class="hero__item-text">
-                CGI animation for presentations and ads
-              </p>
+              CGI animation for presentations and ads
             </li>
           </ul>
 
           <button class="btn-main" type="button">
-            <span class="btn-main__text">
-              Get in touch today
-            </span>
+            Get in touch today
+
+            <svg class="btn-main__arrow" width="14" height="9">
+              <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+            </svg>
           </button>
         </div>
       </div>
@@ -97,20 +93,18 @@
       <div class="container">
         <div class="about__wrapper">
           <div class="about__box">
-            <h2 class="about__title title title--accent">
+            <span class="about__title title ">
               we are
-            </h2>
+            </span>
 
             <div class="about__inner">
-              <h3 class="about__subtitle title">
-                <span class="title--accent">
-                  3D studio
-                </span>
+              <h2 class="about__subtitle title">
+                3D studio
     
                 <span class="title--default">
                   based in Vilnius
                 </span>
-              </h3>          
+              </h2>          
       
               <div class="about__text-wrapper">
                 <p class="about__text">
@@ -129,33 +123,25 @@
 
             <ul class="about__info-list">
               <li class="about__info-item">
-                <span class="about__info-text">
-                  7+ years experience
-                </span>
+                7+ years experience
               </li>
 
               <li class="about__info-item">
-                <span class="about__info-text">
-                  Extreme attention to detail
-                </span>
+                Extreme attention to detail
               </li>
 
               <li class="about__info-item">
-                <span class="about__info-text">
-                  Fixed prices
-                </span>
+                Fixed prices
               </li>
 
               <li class="about__info-item">
-                <span class="about__info-text">
-                  Organized approach
-                </span>
+                Organized approach
               </li>
             </ul>
           </div>
 
-          <div class="about__img" style="background-image: url('images/about/team.jpg')" width="459" height="405">
-            
+          <div class="about__img-wrapper">
+            <img class="about__img" style="background-image: url('images/about/team.jpg')" width="459" height="405">
           </div>
         </div>
       </div>
@@ -163,82 +149,128 @@
 
     <section class="product" id="product">
       <div class="container">
-        <h3 class="product__title title">
-          <span class="title--accent">
+        <h2 class="product__title title">
             Our
-          </span>
           
           <span class="title--default">
             works
           </span> 
-        </h3>
+        </h2>
 
         <div class="product__list">
           <div class="product__item">
-            <div class="product__img product__img--first"
-              style="background-image: url('../images/product/watch-1.jpg')" width="520" height="520"></div>
-            <div class="product__img product__img--first"
-              style="background-image: url('../images/product/watch-2.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--first" style="background-image: url('../images/product/watch-3.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--first" style="background-image: url('../images/product/watch-4.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--first" style="background-image: url('../images/product/watch-5.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--first" style="background-image: url('../images/product/filter-1.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--first" style="background-image: url('../images/product/filter-2.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--first" style="background-image: url('../images/product/filter-3.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--first" style="background-image: url('../images/product/filter-4.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--first"
-              style="background-image: url('../images/product/filter-5.jpg')" width="520" height="520"></div>
-            <div class="product__img product__img--first"
-              style="background-image: url('../images/product/printer-1.jpg')" width="520" height="520"></div>
-            <div class="product__img product__img--first" style="background-image: url('../images/product/printer-2.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--first" style="background-image: url('../images/product/printer-3.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--first" style="background-image: url('../images/product/printer-4.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--first" style="background-image: url('../images/product/printer-5.jpg')" width="250" height="250"></div>
+            <img class="product__img product__img--first"
+              src="./images/product/watch-1.jpg" width="520" height="520">
+
+            <img class="product__img product__img--first"
+              src="./images/product/watch-2.jpg" width="250" height="250">
+
+            <img class="product__img product__img--first" src="./images/product/watch-3.jpg" width="250" height="250">
+
+            <img class="product__img product__img--first" src="./images/product/watch-4.jpg" width="250" height="250">
+
+            <img class="product__img product__img--first" src="./images/product/watch-5.jpg" width="250" height="250">
+
+            <img class="product__img product__img--first" src="./images/product/filter-1.jpg" width="250" height="250">
+
+            <img class="product__img product__img--first" src="./images/product/filter-2.jpg" width="250" height="250">
+
+            <img class="product__img product__img--first" src="./images/product/filter-3.jpg" width="520" height="520">
+
+            <img class="product__img product__img--first" src="./images/product/filter-4.jpg" width="250" height="250">
+
+            <img class="product__img product__img--first"
+            src="./images/product/filter-5.jpg" width="250" height="250">
+
+            <img class="product__img product__img--first"
+            src="./images/product/printer-1.jpg" width="520" height="520">
+
+            <img class="product__img product__img--first" src="./images/product/printer-2.jpg" width="250" height="250">
+
+            <img class="product__img product__img--first" src="./images/product/printer-3.jpg" width="250" height="250">
+
+            <img class="product__img product__img--first" src="./images/product/printer-4.jpg" width="250" height="250">
+
+            <img class="product__img product__img--first" src="./images/product/printer-5.jpg"   width="250" height="250">
           </div>
 
           <div class="product__item">
-            <div class="product__img product__img--second" style="background-image: url('../images/product/usb-1.jpg')"
-              width="520" height="520"></div>
-            <div class="product__img product__img--second" style="background-image: url('../images/product/usb-2.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--second" style="background-image: url('../images/product/usb-3.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--second" style="background-image: url('../images/product/usb-4.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--second" style="background-image: url('../images/product/usb-5.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--second" style="background-image: url('../images/product/coffee-1.jpg')" width="520" height=""520></div>
-            <div class="product__img product__img--second" style="background-image: url('../images/product/coffee-2.jpg')" width="520" height=""520></div>
-            <div class="product__img product__img--second"
-              style="background-image: url('../images/product/razor-1.jpg')" width="520" height="520"></div>
-            <div class="product__img product__img--second" style="background-image: url('../images/product/razor-2.jpg')" width="" height=""></div>
-            <div class="product__img product__img--second" style="background-image: url('../images/product/razor-3.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--second" style="background-image: url('../images/product/razor-4.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--second" style="background-image: url('../images/product/razor-5.jpg')" width="250" height="250"></div>
+            <img class="product__img product__img--second" style="background-image: url('../images/product/usb-1.jpg')"
+              width="520" height="520">
+
+            <img class="product__img product__img--second" style="background-image: url('../images/product/usb-2.jpg')" width="250" height="250">
+
+            <img class="product__img product__img--second" style="background-image: url('../images/product/usb-3.jpg')" width="250" height="250">
+
+            <img class="product__img product__img--second" style="background-image: url('../images/product/usb-4.jpg')" width="250" height="250">
+
+            <img class="product__img product__img--second" style="background-image: url('../images/product/usb-5.jpg')" width="250" height="250">
+
+            <img class="product__img product__img--second" style="background-image: url('../images/product/coffee-1.jpg')" width="520" height="520">
+
+            <img class="product__img product__img--second" style="background-image: url('../images/product/coffee-2.jpg')" width="520" height="520">
+
+            <img class="product__img product__img--second"
+              style="background-image: url('../images/product/razor-1.jpg')" width="520" height="520">
+
+            <img class="product__img product__img--second" style="background-image: url('../images/product/razor-2.jpg')" width="250" height="250">
+
+            <img class="product__img product__img--second" style="background-image: url('../images/product/razor-3.jpg')" width="250" height="250">
+
+            <img class="product__img product__img--second" style="background-image: url('../images/product/razor-4.jpg')" width="250" height="250">
+
+            <img class="product__img product__img--second" style="background-image: url('../images/product/razor-5.jpg')" width="250" height="250">
           </div>
 
           <div class="product__item product__item--third">
-            <div class="product__img product__img--third"
-              style="background-image: url('../images/product/earpods-1.jpg')" width="520" height="520"></div>
-            <div class="product__img product__img--third" style="background-image: url('../images/product/earpods-2.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--third" style="background-image: url('../images/product/earpods-3.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--third" style="background-image: url('../images/product/earpods-4.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--third" style="background-image: url('../images/product/earpods-5.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--third"
-              style="background-image: url('../images/product/holder-1.jpg')" width="520" height="520"></div>
-            <div class="product__img product__img--third" style="background-image: url('../images/product/holder-2.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--third" style="background-image: url('../images/product/holder-3.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--third" style="background-image: url('../images/product/holder-4.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--third" style="background-image: url('../images/product/holder-5.jpg')" width="250" height="250"></div>
-            <div class="product__img product__img--third" style="background-image: url('../images/product/soap.jpg')" width="520" height="520"></div>
-            <div class="product__img product__img--third" style="background-image: url('../images/product/lighter.jpg')" width="520" height="520"></div>
+            <img class="product__img product__img--third"
+              src="./images/product/earpods-1.jpg" width="520" height="520">
+
+            <img class="product__img product__img--third" src="./images/product/earpods-2.jpg" width="250" height="250">
+            
+
+            <img class="product__img product__img--third" src="./images/product/earpods-3.jpg" width="250" height="250">
+            
+
+            <img class="product__img product__img--third" src="./images/product/earpods-4.jpg" width="250" height="250">
+            
+
+            <img class="product__img product__img--third" src="./images/product/earpods-5.jpg" width="250" height="250">
+            
+
+            <img class="product__img product__img--third"
+              src="./images/product/holder-1.jpg" width="520" height="520">
+            
+
+            <img class="product__img product__img--third" src="./images/product/holder-2.jpg" width="250" height="250">
+            
+
+            <img class="product__img product__img--third" src="./images/product/holder-3.jpg" width="250" height="250">
+            
+
+            <img class="product__img product__img--third" src="./images/product/holder-4.jpg" width="250" height="250">
+            
+
+            <img class="product__img product__img--third" src="./images/product/holder-5.jpg" width="250" height="250">
+            
+
+            <img class="product__img product__img--third" src="./images/product/soap.jpg" width="520" height="520">
+            
+
+            <img class="product__img product__img--third" src="./images/product/lighter.jpg" width="520" height="520">
           </div>
         </div>
 
         <div class="product__btn">
           <button class="product__btn btn-main" type="button">
-            <span class="btn-main__text">
-              Get in touch today
-            </span>
+            Get in touch today
+
+            <svg class="btn-main__arrow" width="14" height="9">
+              <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+            </svg>
           </button>
 
-          <button class="product__btn btn-secondary" type="button">
+          <button class="product__btn btn-main--light" type="button">
             Prices
           </button>
         </div>
@@ -249,63 +281,68 @@
       <div class="container">
         <div class="blog__wrapper">
           <div class="blog__inner">
-            <h3 class="blog__title title">
-              <span class="title--accent">
+            <h2 class="blog__title title">
                 3d product
-              </span>
 
               <span class="title--default">
                 rendering
               </span>
-            </h3>
+            </h2>
 
-            <ul class="blog__info blog__info--medium">
-              <li class="blog__info-item">
-                <p class="blog__info-text">
-                  Do you want to get an exact 3D copy or individual images
-                  of your product to show on your website?
-                </p>
-              </li>
-
-              <li class="blog__info-item">
-                <p class="blog__info-text">
-                  Or maybe you need to show customers and investors a product
-                  that is currently under development? The possibilities of 3D
-                  product visualization are endless
-                </p>
-              </li>
-            </ul>
+            <div class="blog__info blog__info--medium">
+              <p class="blog__info-text">
+                Do you want to get an exact 3D copy or individual images
+                of your product to show on your website?
+              </p>
+              
+              <p class="blog__info-text">
+                Or maybe you need to show customers and investors a product
+                that is currently under development? The possibilities of 3D
+                product visualization are endless
+              </p>
+            </div>
 
             <button class="blog__btn btn-main" type="button">
-              <span class="btn-main__text">
-                prices
-              </span>
+              Prices
+
+              <svg class="btn-main__arrow" width="14" height="9">
+                <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+              </svg>
             </button>
 
-            <blockquote class="blockquote">
-              <cite class="blockquote__cite">
+            <div class="blog-descr">
+              <p class="blog-descr__text">
                 It will be enough for us to get your 3D CAD files,
                 but if you don't have them, you can use drawings,
                 photos or just ideas in your head.
-              </cite>
-            </blockquote>
+              </p>
+            </div>
           </div>
 
           <div class="blog__carousel blog__carousel--product">
-            <div class="blog__carousel-item" style="background-image: url('../images/carousel/compressor-front.jpg');" width="520" height="520">
+            <div class="blog__carousel-item">
+              <img class="blog__carousel-img" src="./images/carousel/compressor-front.jpg" alt="image of compressor"
+                width="520" height="520">
             </div>
 
-
-            <div class="blog__carousel-item" style="background-image: url('../images/carousel/engine.jpg');" width="520" height="520">
+            <div class="blog__carousel-item">
+              <img class="blog__carousel-img" src="./images/carousel/engine.jpg" alt="image of compressor" width="520"
+                height="520">
             </div>
 
-            <div class="blog__carousel-item" style="background-image: url('../images/carousel/air-gun.jpg');" width="520" height="520">
+            <div class="blog__carousel-item">
+              <img class="blog__carousel-img" src="./images/carousel/compressor-back.jpg" alt="image of compressor"
+                width="520" height="520">
             </div>
 
-            <div class="blog__carousel-item" style="background-image: url('../images/carousel/cooler.jpg');" width="520" height="520">
+            <div class="blog__carousel-item">
+              <img class="blog__carousel-img" src="./images/carousel/cooler.jpg" alt="image of compressor" width="520"
+                height="520">
             </div>
 
-            <div class="blog__carousel-item" style="background-image: url('../images/carousel/compressor-back.jpg');" width="520" height="520">
+            <div class="blog__carousel-item">
+              <img class="blog__carousel-img" src="./images/carousel/air-gun.jpg" alt="image of compressor" width="520"
+                height="520">
             </div>
           </div>
         </div>
@@ -316,67 +353,64 @@
       <div class="container">
         <div class="blog__wrapper">
           <div class="blog__inner">
-            <h3 class="blog__title title">
-              <span class="title--accent">
+            <h2 class="blog__title title">
                 3d package
-              </span>
 
               <span class="title--default">
                 rendering
               </span>
-            </h3>
+            </h2>
 
-            <ul class="blog__info blog__info--large">
-              <li class="blog__info-item">
-                <p class="blog__info-text">
-                  Get photorealistic images of your product packaging for eCommerce,
-                  trade-show banners, magazines, and much more.
-                  <p>
-                    We can use your 2D label artwork files to quickly create high-quality
-                  and accurate renderings of your product, ready for publication.
-                  </p>
-                </p>
-              </li>
+            <div class="blog__info blog__info--large">
+              <p class="blog__info-text">
+                Get photorealistic images of your product packaging for eCommerce,
+                trade-show banners, magazines, and much more.
+                <br>We can use your 2D label artwork files to quickly create high-quality
+                and accurate renderings of your product, ready for publication.
+              <p>
 
-              <li class="blog__info-item">
-                <p class="blog__info-text">
-                  Overpriced photo shoots of your product packaging for advertising
-                  and e-commerce are no longer necessary.
-                </p>
-              </li>
-            </ul>
+              <p class="blog__info-text">
+                Overpriced photo shoots of your product packaging for advertising
+                and e-commerce are no longer necessary.
+              </p>
+            </div>
 
             <button class="blog__btn btn-main" type="button">
-              <span class="btn-main__text">
-                prices
-              </span>
+              Prices
+              
+              <svg class="btn-main__arrow" width="14" height="9">
+                <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+              </svg>
             </button>
 
-            <blockquote class="blog__blockquote blockquote">
-              <cite class="blockquote__cite">
+            <div class="blog__descr blog-descr">
+              <p class="blog-descr__text">
                 Images of your product can be presented
                 in a particular environment, in progress,
                 or in section.
-              </cite>
-            </blockquote>
+              </p>
+            </div>
           </div>
 
           <div class="blog__carousel blog__carousel--package">
-            <div class="blog__carousel-item" style="background-image: url('../images/carousel/capacin-main.jpg');"
-              width="520" height="520">
+            <div class="blog__carousel-item">
+              <img class="blog__carousel-img" src="./images/carousel/capacin-main.jpg"
+                alt="image of capacin, anti-hair loss conditioner" width="520" height="520">
             </div>
 
-            <div class="blog__carousel-item" style="background-image: url('../images/carousel/capacin-top.jpg');"
-              width="520"
-              height="520">
+            <div class="blog__carousel-item">
+              <img class="blog__carousel-img" src="./images/carousel/capacin-top.jpg"
+              alt="image of capacin, anti-hair loss conditioner" width="520" height="520">
             </div>
 
-            <div class="blog__carousel-item" style="background-image: url('../images/carousel/capacin-bottom.jpg');"
-              width="520" height="520">
+            <div class="blog__carousel-item">
+              <img class="blog__carousel-img" src="./images/carousel/capacin-bottom.jpg"
+              alt="image of capacin, anti-hair loss conditioner" width="520" height="520">
             </div>
 
-            <div class="blog__carousel-item" style="background-image: url('../images/carousel/capacin-main.jpg');"
-              width="520" height="520">
+            <div class="blog__carousel-item">
+              <img class="blog__carousel-img" src="./images/carousel/capacin-main.jpg"
+              alt="image of capacin, anti-hair loss conditioner" width="520" height="520">
             </div>
           </div>
         </div>
@@ -387,45 +421,41 @@
       <div class="container">
         <div class="blog__wrapper">
           <div class="blog__inner">
-            <h3 class="blog__title title">
-              <span class="title--accent">
+            <h2 class="blog__title title">
                 3d product
-              </span>
 
               <span class="title--default">
                 animation
               </span>
-            </h3>
+            </h2>
 
-            <ul class="blog__info blog__info--medium">
-              <li class="blog__info-item">
-                <p class="blog__info-text">
-                  3D product animation creates new possibilities for showing
-                  your product. For example, you can give an interesting insight into
-                  the inner workings of very complex machines or technical systems.
-                </p>
-              </li>
-
-              <li class="blog__info-item">
-                <p class="blog__info-text">
-                  Alone or accompanied by music, 3D animation always
-                  attracts attention.
-                </p>
-              </li>
-            </ul>
+            <div class="blog__info blog__info--medium">
+              <p class="blog__info-text">
+                3D product animation creates new possibilities for showing
+                your product. For example, you can give an interesting insight into
+                the inner workings of very complex machines or technical systems.
+              </p>
+              
+              <p class="blog__info-text">
+                Alone or accompanied by music, 3D animation always
+                attracts attention.
+              </p>
+            </div>
 
             <button class="blog__btn btn-main" type="button">
-              <span class="btn-main__text">
-                prices
-              </span>
+              Prices
+
+              <svg class="btn-main__arrow" width="14" height="9">
+                <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+              </svg>
             </button>
 
-            <blockquote class="blockquote blockquote--large">
-              <cite class="blockquote__cite">
+            <div class="blog-descr blog-descr--large">
+              <p class="blog-descr__text">
                 Step by step we will help you from the script
                 creation to the finished video.
-              </cite>
-            </blockquote>
+              </p>
+            </div>
           </div>
 
           <div class="blog__video">
@@ -442,15 +472,13 @@
 
     <section class="prises" id="prises">
       <div class="container">
-        <h3 class="prises__title title">
-          <span class="title--accent">
+        <h2 class="prises__title title">
             our
-          </span>
 
           <span class="title--default">
             prises
           </span>
-        </h3>
+        </h2>
 
         <ul class="prises__inner">
           <li class="prises__item">
@@ -489,7 +517,11 @@
             </ul>
 
             <div class="prises__bottom">
-              <span class="prises__price prises__price--up">
+              <span class="prises__price">
+                <span class="prises__price-texttop">
+                  from
+                </span>
+
                 <span class="prises__num">
                   700
                 </span>
@@ -500,14 +532,10 @@
               </span>
 
               <button class="prises__btn btn-main">
-                <span class="prises__btn-text btn-main__text">
-                  Contact us
-                </span>
+                Contact us
 
-                <svg class="prises__btn-arrow" width="14" height="9" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z"
-                  />
+                <svg class="btn-main__arrow" width="14" height="9">
+                  <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
                 </svg>
               </button>
             </div>
@@ -550,7 +578,11 @@
             </ul>
 
             <div class="prises__bottom">
-              <span class="prises__price prises__price--up">
+              <span class="prises__price">
+                <span class="prises__price-texttop">
+                  from
+                </span>
+
                 <span class="prises__num">
                   600
                 </span>
@@ -561,13 +593,10 @@
               </span>
 
               <button class="prises__btn btn-main">
-                <span class="prises__btn-text btn-main__text">
-                  Contact us
-                </span>
+                Contact us
                 
-                <svg class="prises__btn-arrow" width="14" height="9" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z" />
+                <svg class="btn-main__arrow" width="14" height="9">
+                  <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
                 </svg>
               </button>
             </div>
@@ -609,7 +638,11 @@
             </ul>
 
             <div class="prises__bottom">
-              <span class="prises__price prises__price--up prises__price--bottom">
+              <span class="prises__price">
+                <span class="prises__price-texttop">
+                  from
+                </span>
+
                 <span class="prises__num">
                   3000
                 </span>
@@ -617,16 +650,17 @@
                 <span class="prises__currency">
                   $
                 </span>
+
+                <span class="prises__price-textbottom">
+                  for 30 sec video
+                </span>
               </span>
 
               <button class="prises__btn btn-main">
-                <span class="prises__btn-text btn-main__text">
-                  Contact us
-                </span>
+                Contact us
 
-                <svg class="prises__btn-arrow" width="14" height="9" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z" />
+                <svg class="btn-main__arrow" width="14" height="9">
+                  <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
                 </svg>
               </button>
             </div>
@@ -637,15 +671,13 @@
 
     <section class="team">
       <div class="container">
-        <h3 class="team__title title">
-          <span class="title--accent">
+        <h2 class="team__title title">
             the pro-3d
-          </span>
 
           <span class="title--default">
             team
           </span>
-        </h3>
+        </h2>
 
         <ul class="team__list">
           <li class="team__item">
@@ -701,24 +733,22 @@
 
     <section class="priority">
       <div class="container">
-        <h3 class="priority__title title">
-          <span class="title--accent">
+        <h2 class="priority__title title">
             Our
-          </span>  
 
           <span class="title--default">
             priority
           </span>
-        </h3>
+        </h2>
 
         <div class="priority__wrapper">
           <div class="priority__inner">
-            <blockquote class="blockquote priority__blockquote">
-              <cite class="blockquote__cite priority__cite">
+            <div class="priority__descr blog-descr ">
+              <p class="blog-descr__text priority__text">
                 is to turn a good working relationship into
                 a long-term collaboration!
-              </cite>
-            </blockquote>
+              </p>
+            </div>
 
             <h4 class="priority__contact-title">
               contacts:
@@ -756,49 +786,49 @@
 
     <section class="contact" id="contact">
       <div class="container">
-        <h3 class="contact__title title">
-          <span class="title--accent">
+        <h2 class="contact__title title">
             contact us
-          </span>
 
           <span class="title--default">
             to discuss your
             project
           </span> 
-        </h3>
+        </h2>
 
         <div class="contact__wrapper">
           <form class="contact__form">
             <label class="contact__label">
-              <input class="contact__input" type="text" placeholder="Name">
+              <input class="contact__input" type="text" placeholder="Name" required>
             </label>
 
             <label class="contact__label">
-              <input class="contact__input" type="email" placeholder="Email">
+              <input class="contact__input" type="email" placeholder="Email" required>
             </label>
 
             <label class="contact__label">
-              <input class="contact__input" type="number" placeholder="Phone">
+              <input class="contact__input" type="number" placeholder="Phone" required>
             </label>
             
             <textarea class="contact__textarea" type="text" placeholder="Describe your project"></textarea>
 
             <button class="contact__form-btn btn-main" type="submit">
-              <span class="btn-main__text">
-                Contact us
-              </span>
+              Contact us
+
+              <svg class="btn-main__arrow" width="14" height="9">
+                <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+              </svg>
             </button>
           </form>
 
 
           <div class="contact__inner">
-            <blockquote class="blockquote contact__blockquote">
-              <cite class="blockquote__cite contact__cite">
+            <div class="contact__descr blog-descr">
+              <p class="blog-descr__text contact__text">
                 Book a free video-consultation
-              </cite>
-            </blockquote>
+              </p>
+            </div>
 
-            <button class="btn-secondary" type="button">
+            <button class="btn-main--light" type="button">
               Schedule
             </button>
           </div>
@@ -811,7 +841,7 @@
     <div class="container">
       <nav class="menu">
         <a class="logo" href="#home">
-          <img src="images/logo-white.png" alt="company logo" width="110" height="27">
+          <img src="images/logo-white.svg" alt="company logo" width="110" height="27">
         </a>
 
         <div class="menu__inner">
@@ -835,7 +865,7 @@
             </li>
           </ul>
 
-          <a class="animate__animated animate__heartBeat menu__contact" href="tel:+79878373829">
+          <a class="menu__contact" href="tel:+79878373829">
             +7 (987) 837-38-29
           </a>
         </div>

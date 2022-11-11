@@ -43,29 +43,31 @@
   }
 
   &__img {
-    align-self: center;
     width: 459px;
     height: 405px;
-    position: relative;
     right: 14%;
     bottom: 5%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 
-    &::after {
-      content: '';
-      background-image: url('../images/about/net.png');
-      position: absolute;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-      right: -15%;
-      bottom: -15%;
-      width: 402px;
-      height: 402px;
-      display: block;
-      z-index: -1;
+    &-wrapper {
+      align-self: center;
+      position: relative;
+
+      &::after {
+        content: '';
+        background-image: url('../images/about/net.svg');
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        right: -15%;
+        bottom: -15%;
+        width: 402px;
+        height: 402px;
+        z-index: -1;
+      }
     }
   }
 
@@ -77,6 +79,8 @@
 
     &-item {
       position: relative;
+      font-weight: 400;
+      text-transform: uppercase;
 
       &::before {
         content: '';
@@ -105,11 +109,6 @@
       &:not(:last-child) {
         margin-bottom: 18px;
       }
-    }
-
-    &-text {
-      font-weight: 400;
-      text-transform: uppercase;
     }
   }
 }

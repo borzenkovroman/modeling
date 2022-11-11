@@ -6,7 +6,7 @@
     position: relative;
   }
 
-  &__blockquote {
+  &__descr {
     position: relative;
     padding: 40px 195px 40px 47px;
     width: 725px;
@@ -14,7 +14,7 @@
     margin-bottom: 114px;
   }
 
-  &__cite {
+  &__text {
     width: 479px;
   }
 
@@ -48,11 +48,13 @@
       }
 
       &:active {
-
+        background-color: $accent;
+        color: $white;
       }
-
+      
       &:focus {
-
+        outline: 1px solid $accent;
+        outline-offset: 6px;
       }
     }
 
