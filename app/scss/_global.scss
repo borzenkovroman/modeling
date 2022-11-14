@@ -11,7 +11,16 @@ body {
   font-family: 'HelveticaNeueCyr', sans-serif;
   font-weight: 300;
   letter-spacing: normal;
-  background-color: #8c8c8c;
+  background-color: #FCFCFC;
+}
+
+.noise-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
 }
 
 .container {
@@ -20,7 +29,7 @@ body {
   padding: 0 15px;
 }
 
-section {
+.section {
   padding: 100px 0;
 }
 
@@ -74,7 +83,7 @@ a {
   font-weight: 550;
   letter-spacing: 0.07em;
   
-  &--default {
+  &__part {
     font-weight: 300;
     font-style: italic;
     letter-spacing: 0;
@@ -87,7 +96,7 @@ button {
   font-style: normal;
 }
 
-.blog-descr {
+.product-blog__descr {
   width: 730px;
   padding: 22px 104px 22px 47px;
   background: linear-gradient(89.68deg, #FBFBFB 49.07%, rgba(251, 251, 251, 0) 97.72%);
@@ -99,7 +108,7 @@ button {
     padding: 40px 165px 40px 47px;
   }
 
-  &__text {
+  &-text {
     font-weight: 700;
     font-size: 24px;
   }
@@ -159,8 +168,13 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border-radius 0.5s,
+              box-shadow 0.5s
+              background-color 0.5s,
+              display 0.5s,
+              color 0.5s;
 
-  &__arrow {
+  &__icon {
     fill: $white;
     margin-left: 10px;
   }
@@ -189,12 +203,11 @@ button {
 
   &:hover {
     background-color: $accent;
-    color: $default;
     border-radius: 0 20px 0 20px;
     outline: 1px solid $brown;
     color: $brown;
 
-    .btn-main__arrow {
+    .btn-main__icon {
       fill: $brown;
     }
 
@@ -203,31 +216,13 @@ button {
     }
   }
 
-  &:active {
-    border-radius: 20px 0 20px 0;
-    outline: 1px dotted $brown;
-    background-color: $brown;
-    color: $white;
-
-    &::after {
-      display: none;
-    }
-    
-    .btn-main__arrow {
-      fill: $white;
-    }
-  }
-
   &:focus {
-    outline: 1px solid $brown;
-    border-radius: 6px;
     background-color: $accent;
-    color: $default;
     border-radius: 0 20px 0 20px;
     outline: 3px double $brown;
     color: $brown;
 
-    .btn-main__arrow {
+    .btn-main__icon {
       fill: $brown;
     }
 
@@ -237,6 +232,21 @@ button {
 
     &::before {
       display: block;
+    }
+  }
+
+  &:active {
+    border-radius: 0 20px 0 20px;
+    outline: 1px dotted $brown;
+    background-color: $brown;
+    color: $white;
+
+    &::after {
+      display: none;
+    }
+
+    .btn-main__icon {
+      fill: $white;
     }
   }
 
@@ -268,5 +278,38 @@ button {
       outline: 3px double $brown;
       color: $white;
     }
+  }
+}
+
+.cost {
+  color: $white;
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: flex-end;
+  line-height: 1;
+  position: relative;
+
+  &__top {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 16px;
+    color: $accent;
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 15px;
+    font-weight: 100;
+    color: $white;
+    letter-spacing: 0;
+  }
+
+  &__currency {
+    font-size: 16px;
   }
 }

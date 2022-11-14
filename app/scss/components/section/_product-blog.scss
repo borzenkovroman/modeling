@@ -1,4 +1,4 @@
-.blog {
+.product-blog {
 
   &--video {
     width: 520px;
@@ -23,20 +23,14 @@
 
   &__info {
     margin-bottom: 40px;
+    max-width: 560px;
+    width: 100%;
+  }
 
-    &--medium {
-      width: 517px;
-    }
-
-    &--large {
-      width: 560px;
-    }
-
-    &-text {
-
-      &:not(:last-child) {
-        margin-bottom: 25px;
-      }
+  &__info-text {
+    
+    &:not(:last-child) {
+      margin-bottom: 25px;
     }
   }
 
@@ -177,7 +171,7 @@
 
       &:hover {
 
-        .blog__video-popup {
+        .product-blog__video-popup {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
