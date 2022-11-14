@@ -17,4 +17,23 @@
       d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z" />
     </svg>
   </symbol>
+
+  <symbol id="noise-bg">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 1920 1080" width="1920" height="1080" opacity="0.64">
+      <defs>
+        <filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+          <feTurbulence type="turbulence" baseFrequency="0.2" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence">
+          </feTurbulence>
+          <feSpecularLighting surfaceScale="1" specularConstant="3" specularExponent="20" lighting-color="hsl(23, 100%, 29%)" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting">
+                <feDistantLight azimuth="3" elevation="200">
+                </feDistantLight>
+            </feSpecularLighting>
+          <feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="specularLighting" result="colormatrix">
+          </feColorMatrix>
+        </filter>
+      </defs>
+      <rect width="1920" height="1080" fill="#ffffff"></rect>
+      <rect width="1920" height="1080" fill="hsl(23, 100%, 29%)" filter="url(#nnnoise-filter)"></rect>
+    </svg>
+  </symbol>
 </svg>

@@ -9,7 +9,7 @@ $(function () {
     autoplaySpeed: 2000
   });
 
-  $('.blog__carousel').slick({
+  $('.product-blog__carousel').slick({
     centerMode: true,
     centerPadding: '60px',
     dots: false,
