@@ -1,12 +1,27 @@
-.prises {
+.prices {
 
   &__title {
     margin-bottom: 80px;
+
+    @media (max-width: 1200px) {
+      font-size: 40px;
+      margin-bottom: 35px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 35px;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+      column-gap: 30px;
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -14,6 +29,17 @@
     background-color: #2b2b2b;
     max-width: 340px;
     width: 100%;
+
+    @media (max-width: 768px) {
+      min-width: 60%;
+    }
+
+    &:not(:last-child) {
+      
+      @media (max-width: 1200px) {
+        margin-bottom: 30px;
+      }
+    }
     
     .btn-main {
 
@@ -29,6 +55,14 @@
       font-weight: 550;
       font-size: 20px;
       border: 1px solid #B2B2B2;
+    }
+  }
+
+  &__img {
+
+    @media (max-width: 768px) {
+      object-fit: cover;
+      width: 100%;
     }
   }
 

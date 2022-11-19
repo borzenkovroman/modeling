@@ -45,16 +45,16 @@ svg {
   display: block;
 }
 
-a,
-svg,
-input,
-img,
-button,
-textarea,
-select {
+
+button {
   border: none;
   font: inherit;
   cursor: pointer;
+}
+
+select,
+textarea {
+  bottom: none;
 }
 
 button {
@@ -64,5 +64,4 @@ button {
 
 a {
   text-decoration: none;
-  color: #303030;
 }

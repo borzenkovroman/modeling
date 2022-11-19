@@ -10,6 +10,11 @@
 
     .logo {
 
+      @media (max-width: 768px) {
+        display: block;
+        margin-bottom: 30px;
+      }
+
       &:hover {
         opacity: 0.5;
       }
@@ -24,6 +29,28 @@
       }
     }
 
+    &__wrapper {
+
+    }
+
+    &__info {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+
+    &__info-item {
+
+    }
+
+    &__info-text {
+      font-size: 10px;
+      font-weight: 100;
+      color: $footer;
+    }
+
     &__inner {
       display: flex;
     }
@@ -31,6 +58,16 @@
     &__list {
       margin-right: 110px;
       display: flex;
+
+      @media (max-width: 992px) {
+        margin-right: 50px;
+      }
+
+      @media (max-width: 768px) {
+        margin-right: 0;  
+        flex-direction: column;
+        text-align: right;
+      }
     }
 
     &__item {
@@ -40,6 +77,11 @@
 
       &:not(:last-child) {
         margin-right: 30px;
+
+        @media (max-width: 768px) {
+          margin-right: 0;
+          margin-bottom: 14px;
+        }
       }
     }
 
@@ -56,6 +98,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transition: all 0.3s ease-in-out;
+
+      @media (max-width: 576px) {
+        font-size: 13px;
+      }  
 
       &:after {
         content: '';
@@ -79,13 +125,12 @@
 
       &:active {
         background-image: linear-gradient(to left,
-            $default,
-            $default 50%,
-            $accent 50%);
+            $footer,
+            $footer 50%,
+            $brown 50%);
         background-size: 200% 100%;
         background-position: -100%;
         display: inline-block;
-        padding: 5px 0;
         position: relative;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -93,11 +138,11 @@
       }
 
       &:active::after {
-        background: $default;
+        background: $brown;
       }
 
       &:focus {
-        outline: 1px solid $default;
+        outline: 1px solid $white;
         outline-offset: 6px;
       }
     }
@@ -107,6 +152,10 @@
       position: relative;
       color: $white;
 
+      @media (max-width: 768px) {
+        display: none;
+      }
+
       &:hover {
         transform: scale(1.2);
         color: $accent;
@@ -114,7 +163,7 @@
 
       &:active {
         transform: scale(1.2);
-        color: $default;
+        color: $white;
       }
 
       &::after {
