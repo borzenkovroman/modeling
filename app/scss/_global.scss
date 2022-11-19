@@ -20,6 +20,7 @@ body {
   left: 0;
   min-width: 100%;
   min-height: 100%;
+  opacity: 0.4;
   z-index: -2;
 }
 
@@ -31,6 +32,18 @@ body {
 
 .section {
   padding: 100px 0;
+
+  @media (max-width: 1200px) {
+    padding: 70px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: 576px) {
+    padding: 35px 0;
+  }
 }
 
 .sr-only {
@@ -46,10 +59,7 @@ body {
   overflow: hidden;
 }
 
-a,
-button,
-svg,
-img {
+.int {
   transition: background-color .5s,
               transform .5s,
               opacity .5s,
@@ -57,12 +67,9 @@ img {
               border-color .5s;
 }
 
-a {
-  font-size: 14px;
-  line-height: 1.45;
-  font-weight: 300;
+.click-area {
   position: relative;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -72,6 +79,13 @@ a {
     height: 60px;
     transform: translate(-50%, -50%);
   }
+}
+
+a {
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 300;
+  color: $default;
 }
 
 .title {
@@ -94,24 +108,6 @@ button {
   text-transform: uppercase;
   font-size: 14px;
   font-style: normal;
-}
-
-.product-blog__descr {
-  width: 730px;
-  padding: 22px 104px 22px 47px;
-  background: linear-gradient(89.68deg, #FBFBFB 49.07%, rgba(251, 251, 251, 0) 97.72%);
-  position: absolute;
-  bottom: -40px;
-  left: -10%;
-
-  &--large {
-    padding: 40px 165px 40px 47px;
-  }
-
-  &-text {
-    font-weight: 700;
-    font-size: 24px;
-  }
 }
 
 .slick-icon {
@@ -173,6 +169,10 @@ button {
               background-color 0.5s,
               display 0.5s,
               color 0.5s;
+
+  @media (max-width: 768px) {
+    padding: 20px 20px;
+  }
 
   &__icon {
     fill: $white;
@@ -255,6 +255,10 @@ button {
     border: 1px solid $default;
     padding: 26px 50px;
 
+    @media (max-width: 768px) {
+      padding: 20px 20px;
+    }
+
     &:hover {
       background-color: transparent;
       border-radius: 20px 0 20px 0;
@@ -277,6 +281,10 @@ button {
       border-radius: 0 20px 0 20px;
       outline: 3px double $brown;
       color: $white;
+    }
+
+    @media (max-width: 576px) {
+      margin: 0 auto;
     }
   }
 }

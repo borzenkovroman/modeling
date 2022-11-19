@@ -13,37 +13,41 @@
     <div class="container">
       <header class="header">
         <nav class="menu">
-          <button class="menu__btn" type="button">
+          <button class="menu__btn int" type="button">
             <span class="menu__line"></span>
             <span class="sr-only">open main menu</span>
           </button>
 
-          <a class="logo" href="#home">
-            <img src="images/logo.svg" alt="modeling logo" width="110" height="27">
+          <a class="logo click-area int" href="#home">
+            <img src="./images/logo.svg" alt="modeling logo" width="110" height="27">
+          </a>
+
+          <a class="logo logo__menu click-area int" href="#home">
+            <img src="./images/logo-white.svg" alt="modeling logo" width="110" height="27">
           </a>
 
           <div class="menu__inner">
             <ul class="menu__list">
               <li class="menu__item">
-                <a class="menu__link" href="#product">
+                <a class="menu__link click-area int" href="#product">
                   Our work
                 </a> 
               </li>
     
               <li class="menu__item">
-                <a class="menu__link" href="#prises">
+                <a class="menu__link click-area int" href="#prices">
                   Services and prices
                 </a>
               </li>
     
               <li class="menu__item">
-                <a class="menu__link" href="#contact">
+                <a class="menu__link click-area int" href="#contact">
                   Contacts
                 </a>
               </li>
             </ul>
     
-            <a class="menu__contact" href="tel:+79878373829">
+            <a class="menu__contact click-area int" href="tel:+79878373829">
               +7 (987) 837-38-29
             </a>
           </div>
@@ -76,7 +80,7 @@
             </li>
           </ul>
 
-          <button class="btn-main" type="button">
+          <button class="hero__btn-main btn-main int" type="button">
             Get in touch today
 
             <svg class="btn-main__icon" width="14" height="9">
@@ -93,7 +97,7 @@
       <div class="container">
         <div class="about__wrapper">
           <div class="about__box">
-            <span class="about__decor title">
+            <span class="about__decor">
               we are
             </span>
 
@@ -120,34 +124,37 @@
                 </p>  
               </div>
             </div>
-
-            <ul class="about__info-list">
-              <li class="about__info-item">
-                7+ years experience
-              </li>
-
-              <li class="about__info-item">
-                Extreme attention to detail
-              </li>
-
-              <li class="about__info-item">
-                Fixed prices
-              </li>
-
-              <li class="about__info-item">
-                Organized approach
-              </li>
-            </ul>
           </div>
 
-          <div class="about__img-wrapper">
+          <div class="about__thumb">
             <img class="about__img" src="./images/about/team.jpg" alt="members of our team" width="459" height="405">
           </div>
+        </div>
+
+
+        <div class="about__info-wrapper">
+          <ul class="about__info-list">
+            <li class="about__info-item">
+              7+ years experience
+            </li>
+
+            <li class="about__info-item">
+              Extreme attention to detail
+            </li>
+
+            <li class="about__info-item">
+              Fixed prices
+            </li>
+
+            <li class="about__info-item">
+              Organized approach
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="product section" id="product">
+    <section class="product" id="product">
       <div class="container">
         <h2 class="product__title title">
             Our
@@ -157,10 +164,14 @@
           </span> 
         </h2>
 
-        <div class="product__list">
+        <div class="product__gallery">
           <div class="product__item">
             <ul class="product__grid">
+              <!-- на адаптиве не меняется картинка когда пишу тег пикчер. -->
               <li class="product__cell product__cell--big">
+                <!-- <picture>
+                  <source srcset="./images/product/watch-1-mob.jpg 1x, ./images/product/watch-1-mob-2x.jpg 2x" media="(max-width:786px)">
+                </picture> -->
                 <img class="product__img" src="./images/product/watch-1.jpg"
                   alt="3d model of the watch main image" width="520" height="520">
               </li>
@@ -368,7 +379,7 @@
         </div>
 
         <div class="product__bottom">
-          <button class="product__btn-main btn-main" type="button">
+          <button class="product__btn-main btn-main int" type="button">
             Get in touch today
 
             <svg class="btn-main__icon" width="14" height="9">
@@ -376,255 +387,255 @@
             </svg>
           </button>
 
-          <button class="product__btn-main btn-main btn-main--light" type="button">
+          <button class="product__btn-main btn-main--light int" type="button">
             Prices
-          </button>
+          </button> 
         </div>
+
+        <ul class="product__list">
+          <li class="product__detail">
+            <article class="product-card">
+              <div class="container">
+                <div class="product-card__wrapper">
+                  <div class="product-card__inner">
+                    <h3 class="product-card__title title">
+                      3d product
+
+                      <span class="title__part">
+                        rendering
+                      </span>
+                    </h3>
+
+                    <div class="product-card__info">
+                      <p class="product-card__info-text">
+                        Do you want to get an exact 3D copy or individual images
+                        of your product to show on your website?
+                      </p>
+
+                      <p class="product-card__info-text">
+                        Or maybe you need to show customers and investors a product
+                        that is currently under development? The possibilities of 3D
+                        product visualization are endless
+                      </p>
+                    </div>
+
+                    <button class="product-card__btn-main btn-main int" type="button">
+                      Prices
+
+                      <svg class="btn-main__icon" width="14" height="9">
+                        <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </button>
+
+                    <div class="product-card__descr">
+                      <p class="product-card__descr-text">
+                        It will be enough for us to get your 3D CAD files,
+                        but if you don't have them, you can use drawings,
+                        photos or just ideas in your head.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="product-card__carousel product-card__carousel--product">
+                    <div class="product-card__carousel-item">
+                      <img class="product-card__carousel-img" src="./images/carousel/compressor-front.jpg"
+                        alt="main photo of compressor" width="520" height="520">
+                    </div>
+
+                    <div class="product-card__carousel-item">
+                      <img class="product-card__carousel-img" src="./images/carousel/engine.jpg"
+                        alt="compressor's engine" width="520" height="520">
+                    </div>
+
+                    <div class="product-card__carousel-item">
+                      <img class="product-card__carousel-img" src="./images/carousel/compressor-back.jpg"
+                        alt="back side of the compressor" width="520" height="520">
+                    </div>
+
+                    <div class="product-card__carousel-item">
+                      <img class="product-card__carousel-img" src="./images/carousel/cooler.jpg"
+                        alt="compressor's cooler" width="520" height="520">
+                    </div>
+
+                    <div class="product-card__carousel-item">
+                      <img class="product-card__carousel-img" src="./images/carousel/air-gun.jpg"
+                        alt="compressor's air gun" width="520" height="520">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="product__detail">
+            <article class="product-card">
+              <div class="container">
+                <div class="product-card__wrapper">
+                  <div class="product-card__inner">
+                    <h3 class="product-card__title title">
+                      3d package
+
+                      <span class="title__part">
+                        rendering
+                      </span>
+                    </h3>
+
+                    <div class="product-card__info">
+                      <p class="product-card__info-text">
+                        Get photorealistic images of your product packaging for eCommerce,
+                        trade-show banners, magazines, and much more.
+                        <br>We can use your 2D label artwork files to quickly create high-quality
+                        and accurate renderings of your product, ready for publication.
+                        <p>
+
+                          <p class="product-card__info-text">
+                            Overpriced photo shoots of your product packaging for advertising
+                            and e-commerce are no longer necessary.
+                          </p>
+                    </div>
+
+                    <button class="product-card__btn-main btn-main int" type="button">
+                      Prices
+
+                      <svg class="btn-main__icon" width="14" height="9">
+                        <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </button>
+
+                    <div class="product-card__descr product-card__descr">
+                      <p class="product-card__descr-text">
+                        Images of your product can be presented
+                        in a particular environment, in progress,
+                        or in section.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="product-card__carousel product-card__carousel--package">
+                    <div class="product-card__carousel-item">
+                      <img class="product-card__carousel-img" src="./images/carousel/capacin-main.jpg"
+                        alt="capacin, anti-hair loss conditioner" width="520" height="520">
+                    </div>
+
+                    <div class="product-card__carousel-item">
+                      <img class="product-card__carousel-img" src="./images/carousel/capacin-top.jpg"
+                        alt="top side of capacin" width="520" height="520">
+                    </div>
+
+                    <div class="product-card__carousel-item">
+                      <img class="product-card__carousel-img" src="./images/carousel/capacin-bottom.jpg"
+                        alt="bottom instractions of capacin" width="520" height="520">
+                    </div>
+
+                    <div class="product-card__carousel-item">
+                      <img class="product-card__carousel-img" src="./images/carousel/capacin-main.jpg"
+                        alt="anti-hair loss conditioner" width="520" height="520">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="product__detail">
+            <article class="product-card">
+              <div class="container">
+                <div class="product-card__wrapper">
+                  <div class="product-card__inner">
+                    <h3 class="product-card__title title">
+                      3d product
+
+                      <span class="title__part">
+                        animation
+                      </span>
+                    </h3>
+
+                    <div class="product-card__info">
+                      <p class="product-card__info-text">
+                        3D product animation creates new possibilities for showing
+                        your product. For example, you can give an interesting insight into
+                        the inner workings of very complex machines or technical systems.
+                      </p>
+
+                      <p class="product-card__info-text">
+                        Alone or accompanied by music, 3D animation always
+                        attracts attention.
+                      </p>
+                    </div>
+
+                    <button class="product-card__btn-main btn-main int" type="button">
+                      Prices
+
+                      <svg class="btn-main__icon" width="14" height="9">
+                        <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </button>
+
+                    <div class="product-card__descr product-card__descr--large">
+                      <p class="product-card__descr-text">
+                        Step by step we will help you from the script
+                        creation to the finished video.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="product-card__video">
+                    <a data-fancybox class="product-card__video-link click-area int"
+                      href="https://www.youtube.com/watch?v=MUOV0dp2eqo&t=4s"
+                      style="background-image: url('../images/video/watch.jpg');">
+                      <button class="product-card__video-popup int" type="button"
+                        style="background-image: url('../images/video/popup.svg');">
+
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <ul class="product-blog__list">
-      <li class="product-blog__item">
-        <article class="product-blog section">
-          <div class="container">
-            <div class="product-blog__wrapper">
-              <div class="product-blog__inner">
-                <h2 class="product-blog__title title">
-                  3d product
-
-                  <span class="title__part">
-                    rendering
-                  </span>
-                </h2>
-
-                <div class="product-blog__info">
-                  <p class="product-blog__info-text">
-                    Do you want to get an exact 3D copy or individual images
-                    of your product to show on your website?
-                  </p>
-
-                  <p class="product-blog__info-text">
-                    Or maybe you need to show customers and investors a product
-                    that is currently under development? The possibilities of 3D
-                    product visualization are endless
-                  </p>
-                </div>
-
-                <button class="product-blog__btn-main btn-main" type="button">
-                  Prices
-
-                  <svg class="btn-main__icon" width="14" height="9">
-                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
-                  </svg>
-                </button>
-
-                <div class="product-blog__descr">
-                  <p class="product-blog__descr-text">
-                    It will be enough for us to get your 3D CAD files,
-                    but if you don't have them, you can use drawings,
-                    photos or just ideas in your head.
-                  </p>
-                </div>
-              </div>
-
-              <div class="product-blog__carousel product-blog__carousel--product">
-                <div class="product-blog__carousel-item">
-                  <img class="product-blog__carousel-img" src="./images/carousel/compressor-front.jpg"
-                    alt="main of compressor" width="520" height="520">
-                </div>
-
-                <div class="product-blog__carousel-item">
-                  <img class="product-blog__carousel-img" src="./images/carousel/engine.jpg" alt="compressor's engine"
-                    width="520" height="520">
-                </div>
-
-                <div class="product-blog__carousel-item">
-                  <img class="product-blog__carousel-img" src="./images/carousel/compressor-back.jpg"
-                    alt="back side of the compressor" width="520" height="520">
-                </div>
-
-                <div class="product-blog__carousel-item">
-                  <img class="product-blog__carousel-img" src="./images/carousel/cooler.jpg" alt="compressor's cooler"
-                    width="520" height="520">
-                </div>
-
-                <div class="product-blog__carousel-item">
-                  <img class="product-blog__carousel-img" src="./images/carousel/air-gun.jpg" alt="compressor's air gun"
-                    width="520" height="520">
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </li>
-
-      <li class="product-blog__item">
-        <article class="product-blog section">
-          <div class="container">
-            <div class="product-blog__wrapper">
-              <div class="product-blog__inner">
-                <h2 class="product-blog__title title">
-                  3d package
-
-                  <span class="title__part">
-                    rendering
-                  </span>
-                </h2>
-
-                <div class="product-blog__info">
-                  <p class="product-blog__info-text">
-                    Get photorealistic images of your product packaging for eCommerce,
-                    trade-show banners, magazines, and much more.
-                    <br>We can use your 2D label artwork files to quickly create high-quality
-                    and accurate renderings of your product, ready for publication.
-                    <p>
-
-                      <p class="product-blog__info-text">
-                        Overpriced photo shoots of your product packaging for advertising
-                        and e-commerce are no longer necessary.
-                      </p>
-                </div>
-
-                <button class="product-blog__btn-main btn-main" type="button">
-                  Prices
-
-                  <svg class="btn-main__icon" width="14" height="9">
-                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
-                  </svg>
-                </button>
-
-                <div class="product-blog__descr product-blog__descr">
-                  <p class="product-blog__descr-text">
-                    Images of your product can be presented
-                    in a particular environment, in progress,
-                    or in section.
-                  </p>
-                </div>
-              </div>
-
-              <div class="product-blog__carousel product-blog__carousel--package">
-                <div class="product-blog__carousel-item">
-                  <img class="product-blog__carousel-img" src="./images/carousel/capacin-main.jpg"
-                    alt="capacin, anti-hair loss conditioner" width="520" height="520">
-                </div>
-
-                <div class="product-blog__carousel-item">
-                  <img class="product-blog__carousel-img" src="./images/carousel/capacin-top.jpg"
-                    alt="top side of capacin" width="520" height="520">
-                </div>
-
-                <div class="product-blog__carousel-item">
-                  <img class="product-blog__carousel-img" src="./images/carousel/capacin-bottom.jpg"
-                    alt="bottom instractions of capacin" width="520" height="520">
-                </div>
-
-                <div class="product-blog__carousel-item">
-                  <img class="product-blog__carousel-img" src="./images/carousel/capacin-main.jpg"
-                    alt="anti-hair loss conditioner" width="520" height="520">
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </li>
-
-      <li class="product-blog__item">
-        <article class="product-blog section">
-          <div class="container">
-            <div class="product-blog__wrapper">
-              <div class="product-blog__inner">
-                <h2 class="product-blog__title title">
-                  3d product
-
-                  <span class="title__part">
-                    animation
-                  </span>
-                </h2>
-
-                <div class="product-blog__info">
-                  <p class="product-blog__info-text">
-                    3D product animation creates new possibilities for showing
-                    your product. For example, you can give an interesting insight into
-                    the inner workings of very complex machines or technical systems.
-                  </p>
-
-                  <p class="product-blog__info-text">
-                    Alone or accompanied by music, 3D animation always
-                    attracts attention.
-                  </p>
-                </div>
-
-                <button class="product-blog__btn-main btn-main" type="button">
-                  Prices
-
-                  <svg class="btn-main__icon" width="14" height="9">
-                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
-                  </svg>
-                </button>
-
-                <div class="product-blog__descr product-blog__descr--large">
-                  <p class="product-blog__descr-text">
-                    Step by step we will help you from the script
-                    creation to the finished video.
-                  </p>
-                </div>
-              </div>
-
-              <div class="product-blog__video">
-                <a data-fancybox class="product-blog__video-link"
-                  href="https://www.youtube.com/watch?v=MUOV0dp2eqo&t=4s"
-                  style="background-image: url('../images/video/watch.jpg');">
-                  <button class="product-blog__video-popup" type="button"
-                    style="background-image: url('../images/video/popup.svg');">
-
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-      </li>
-    </ul>
-
-    <section class="prises section" id="prises">
+    <section class="prices section" id="prices">
       <div class="container">
-        <h2 class="prises__title title">
+        <h2 class="prices__title title">
             our
 
           <span class="title__part">
-            prises
+            prices
           </span>
         </h2>
 
-        <ul class="prises__inner">
-          <li class="prises__item">
-            <img class="prises__img" width="340" height="300" src="images/prises/compressor.jpg" alt="compressor as an example of 3d product rendering">
+        <ul class="prices__inner">
+          <li class="prices__item">
+            <img class="prices__img" width="340" height="300" src="images/prices/compressor.jpg" alt="example of 3d product rendering">
 
-            <h3 class="prises__item-title title">
+            <h3 class="prices__item-title title">
               3d product rendering
             </h3>
 
-            <ul class="prises__list">
-              <li class="prises__list-item">
+            <ul class="prices__list">
+              <li class="prices__list-item">
                 3D models creation based
                 on drawings
               </li>
 
-              <li class="prises__list-item">
+              <li class="prices__list-item">
                 Creation of 3D models from photos
                 and sketches
               </li>
 
-              <li class="prises__list-item">
+              <li class="prices__list-item">
                 Processing of scan results
               </li>
 
-              <li class="prises__list-item">
+              <li class="prices__list-item">
                 Preparing your model for 3D printing
               </li>
             </ul>
 
-            <div class="prises__bottom">
+            <div class="prices__bottom">
               <span class="cost">
                 <span class="cost__top">
                   from
@@ -639,7 +650,7 @@
                 </span>
               </span>
 
-              <button class="prises__btn-main btn-main">
+              <button class="prices__btn-main btn-main int">
                 Contact us
 
                 <svg class="btn-main__icon" width="14" height="9">
@@ -649,35 +660,35 @@
             </div>
           </li>
 
-          <li class="prises__item">
-            <img class="prises__img" width="340" height="300" src="images/prises/capsaicin.jpg"
-              alt="capsaicin as an example of 3d product package">
+          <li class="prices__item">
+            <img class="prices__img" width="340" height="300" src="images/prices/capsaicin.jpg"
+              alt="example of 3d product package">
 
-            <h3 class="prises__item-title title">
+            <h3 class="prices__item-title title">
               3d package rendering
             </h3>
 
-            <ul class="prises__list">
-              <li class="prises__list-item">
+            <ul class="prices__list">
+              <li class="prices__list-item">
                 3D models creation based
                 on drawings
               </li>
 
-              <li class="prises__list-item">
+              <li class="prices__list-item">
                 Creation of 3D models from photos
                 and sketches
               </li>
 
-              <li class="prises__list-item">
+              <li class="prices__list-item">
                 Preparation of banners and images
               </li>
 
-              <li class="prises__list-item">
+              <li class="prices__list-item">
                 Variable material and color options
               </li>
             </ul>
 
-            <div class="prises__bottom">
+            <div class="prices__bottom">
               <span class="cost">
                 <span class="cost__top">
                   from
@@ -692,7 +703,7 @@
                 </span>
               </span>
 
-              <button class="prises__btn-main btn-main">
+              <button class="prices__btn-main btn-main int">
                 Contact us
                 
                 <svg class="btn-main__icon" width="14" height="9">
@@ -702,35 +713,35 @@
             </div>
           </li>
 
-          <li class="prises__item">
-            <img class="prises__img" width="340" height="300" src="images/prises/watch.jpg"
-              alt="watch as an example of 3d product animation">
+          <li class="prices__item">
+            <img class="prices__img" width="340" height="300" src="images/prices/watch.jpg"
+              alt="example of 3d product animation">
 
-            <h3 class="prises__item-title title">
+            <h3 class="prices__item-title title">
               3d product animation
             </h3>
 
-            <ul class="prises__list">
-              <li class="prises__list-item">
+            <ul class="prices__list">
+              <li class="prices__list-item">
                 3D models creation based
                 on drawings
               </li>
 
-              <li class="prises__list-item">
+              <li class="prices__list-item">
                 Creation of the environment
                 and materials
               </li>
 
-              <li class="prises__list-item">
+              <li class="prices__list-item">
                 Storyboard
               </li>
 
-              <li class="prises__list-item">
+              <li class="prices__list-item">
                 Sound design
               </li>
             </ul>
 
-            <div class="prises__bottom">
+            <div class="prices__bottom">
               <span class="cost">
                 <span class="cost__top">
                   from
@@ -749,7 +760,7 @@
                 </span>
               </span>
 
-              <button class="prises__btn-main btn-main">
+              <button class="prices__btn-main btn-main int">
                 Contact us
 
                 <svg class="btn-main__icon" width="14" height="9">
@@ -777,48 +788,48 @@
             <img class="team__item-img" src="images/team/member-unknown.png" alt="photo of the team member" width="222" height="230">
 
             <h3 class="team__item-title">
-              Cyril Genba
-
-              <span class="team__item-subtitle">
-                cmo
-              </span>
+              Cyril Genba  
             </h3>
+
+            <p class="team__position">
+              cmo
+            </p>
           </li>
 
           <li class="team__item">
             <img class="team__item-img" src="images/team/member-unknown.png" alt="photo of the team member" width="222" height="230">
 
             <h3 class="team__item-title">
-              Yulia Volynskova
-
-              <span class="team__item-subtitle">
-                cpo
-              </span>
+              Yulia Volynskova  
             </h3>
+
+            <p class="team__position">
+              cpo
+            </p>
           </li>
 
           <li class="team__item">
             <img class="team__item-img" src="images/team/member-unknown.png" alt="photo of the team member" width="222" height="230">
 
             <h3 class="team__item-title">
-              Max Volynsckov
-
-              <span class="team__item-subtitle">
-                ceo
-              </span>
+              Max Volynsckov  
             </h3>
+
+            <p class="team__position">
+              ceo
+            </p>
           </li>
 
           <li class="team__item">
             <img class="team__item-img" src="images/team/member-unknown.png" alt="photo of the team member" width="222" height="230">
 
             <h3 class="team__item-title">
-              Apas Yancauscas
-
-              <span class="team__item-subtitle">
-                Chief 3D designer
-              </span>
+              Apas Yancauscas  
             </h3>
+
+            <p class="team__position">
+              Chief 3D designer
+            </p>
           </li>
         </ul>
       </div>
@@ -836,38 +847,40 @@
 
         <div class="priority__wrapper">
           <div class="priority__inner">
-            <div class="priority__descr product-blog__descr ">
-              <p class="product-blog__descr-text priority__text">
+            <div class="priority__descr">
+              <p class="priority__text">
                 is to turn a good working relationship into
                 a long-term collaboration!
               </p>
             </div>
 
-            <h3 class="priority__contact-title">
-              contacts:
-            </h3>
+            <address class="priority__contact">
+              <h3 class="priority__contact-title">
+                contacts:
+              </h3>
 
-            <ul class="priority__contact-inner">
-              <li class="priority__contact-item">
-                <a class="priority__contact-link" href="tel:+79878373829">
-                  <svg class="priority__contact-icon" width="18" height="18">
-                    <use xlink:href="images/icons/sprite.svg#contact-tel"></use>
-                  </svg>
+              <ul class="priority__contact-inner">
+                <li class="priority__contact-item">
+                  <a class="priority__contact-link click-area int" href="tel:+79878373829">
+                    <svg class="priority__contact-icon" width="18" height="18">
+                      <use xlink:href="images/icons/sprite.svg#contact-tel"></use>
+                    </svg>
 
-                  +7 (987) 837-38-29
-                </a>
-              </li>
+                    +7 (987) 837-38-29
+                  </a>
+                </li>
 
-              <li class="priority__contact-item">
-                <a class="priority__contact-link" href="mailto:Info@produt3d.pro">
-                  <svg class="priority__contact-icon" width="19" height="14">
-                    <use xlink:href="images/icons/sprite.svg#contact-mail"></use>
-                  </svg>
+                <li class="priority__contact-item">
+                  <a class="priority__contact-link click-area int" href="mailto:info@produt3d.pro">
+                    <svg class="priority__contact-icon" width="19" height="14">
+                      <use xlink:href="images/icons/sprite.svg#contact-mail"></use>
+                    </svg>
 
-                  Info@produt3d.pro
-                </a>
-              </li>
-            </ul>
+                    info@produt3d.pro
+                  </a>
+                </li>
+              </ul>
+            </address>
           </div>
 
           <div class="priority__img-wrapper">
@@ -879,49 +892,53 @@
 
     <section class="contact section" id="contact">
       <div class="container">
-        <h2 class="contact__title title">
-            contact us
-
-          <span class="title__part">
-            to discuss your
-            project
-          </span> 
-        </h2>
-
         <div class="contact__wrapper">
-          <form class="contact__form">
-            <label class="contact__label">
-              <input class="contact__input" type="text" placeholder="Name" required>
-            </label>
-
-            <label class="contact__label">
-              <input class="contact__input" type="email" placeholder="Email" required>
-            </label>
-
-            <label class="contact__label">
-              <input class="contact__input" type="number" placeholder="Phone" required>
-            </label>
-            
-            <textarea class="contact__textarea" type="text" placeholder="Describe your project"></textarea>
-
-            <button class="contact__form-btn btn-main" type="submit">
-              Contact us
-
-              <svg class="btn-main__icon" width="14" height="9">
-                <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
-              </svg>
-            </button>
-          </form>
+          <div class="contact__box">
+            <h2 class="contact__title title">
+              contact us
+  
+              <span class="title__part">
+                <br>to discuss your
+                project
+              </span>
+            </h2>
+  
+            <form class="contact__form">
+              <label class="contact__label">
+                <input class="contact__input" type="text" placeholder="Name" required>
+              </label>
+  
+              <label class="contact__label">
+                <input class="contact__input" type="email" placeholder="Email" required>
+              </label>
+  
+              <label class="contact__label">
+                <input class="contact__input" type="tel" placeholder="Phone" required>
+              </label>
+              
+              <label class="contact__label">
+                <textarea class="contact__textarea" placeholder="Describe your project"></textarea>
+              </label>
+  
+              <button class="contact__btn-main btn-main int" type="submit">
+                Contact us
+  
+                <svg class="btn-main__icon" width="14" height="9">
+                  <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
 
 
           <div class="contact__inner">
-            <div class="contact__descr product-blog__descr">
-              <p class="product-blog__descr-text contact__text">
+            <div class="contact__descr product-card__descr">
+              <p class="product-card__descr-text contact__text">
                 Book a free video-consultation
               </p>
             </div>
 
-            <button class="btn-main--light" type="button">
+            <button class="contact__btn-main--light btn-main--light int" type="button">
               Schedule
             </button>
           </div>
@@ -933,32 +950,48 @@
   <footer class="footer">
     <div class="container">
       <nav class="menu">
-        <a class="logo" href="#home">
-          <img src="images/logo-white.svg" alt="company logo" width="110" height="27">
-        </a>
+        <div class="menu__wrapper">
+          <a class="logo click-area int" href="#home">
+            <img src="images/logo-white.svg" alt="company logo" width="110" height="27">
+          </a>
+
+          <ul class="menu__info">
+            <li class="menu__info-item">
+              <span class="menu__info-text">
+                © 2022 Product 3D
+              </span>
+            </li>
+
+            <li class="menu__info-item">
+              <span class="menu__info-text">
+                Privacy policy
+              </span>
+            </li>
+          </ul>
+        </div>
 
         <div class="menu__inner">
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link" href="#">
+              <a class="menu__link click-area int" href="#">
                 Our work
               </a>
             </li>
 
             <li class="menu__item">
-              <a class="menu__link" href="#">
+              <a class="menu__link click-area int" href="#">
                 Services and prices
               </a>
             </li>
 
             <li class="menu__item">
-              <a class="menu__link" href="#">
+              <a class="menu__link click-area int" href="#">
                 Contacts
               </a>
             </li>
           </ul>
 
-          <a class="menu__contact" href="tel:+79878373829">
+          <a class="menu__contact click-area int" href="tel:+79878373829">
             +7 (987) 837-38-29
           </a>
         </div>

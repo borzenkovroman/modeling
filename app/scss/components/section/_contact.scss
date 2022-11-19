@@ -2,9 +2,20 @@
 
   &__title {
     margin-bottom: 35px;
-    width: 560px;
+    max-width: 560px;
+    width: 100%;
     font-size: 50px;
     letter-spacing: 0.05em;
+    display: block;
+
+    @media (max-width: 1200px) {
+      font-size: 40px;
+      margin-bottom: 35px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 35px;
+    }
 
     .title--accent {
       display: block;
@@ -13,30 +24,57 @@
 
   &__wrapper {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1200px) {
+      column-gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__box {
+
+    @media (max-width: 1200px) {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
-    margin-right: 160px;
 
-    &-btn {
-      box-shadow: none;
-      width: 240px;
+    @media (max-width: 1200px) {
+      margin-right: 0;
+    }
+  }
+  
+  &__btn-main {
+    box-shadow: none;
+    width: 240px;
+    
+    @media (max-width: 1200px) {
+      width: 100%;
     }
   }
   
   &__input,
   &__textarea {
-    min-width: 340px;
+    max-width: 340px;
+    width: 100%;
     margin-bottom: 25px;
-    padding: 26px 0 26px 40px;
+    padding: 26px 26px 26px 40px;
     font-size: 14px;
     border: 1px solid #B2B2B2;
     text-transform: uppercase;
-    
-    &:last-child {
-      margin-bottom: 15px;
+
+    @media (max-width: 1200px) {
+      min-width: 100%;
     }
   }
 
@@ -59,15 +97,26 @@
     }
   }
 
+  &__input  {
+    margin-bottom: 15px;
+  }
+
   &__textarea {
     text-transform: none;
-    resize: none;
-    overflow: hidden;
-    height: 133px;
+    resize: vertical;
+    min-height: 133px;
+    max-height: 250px;
+    margin-bottom: 25px;
   }
 
   &__inner {
     position: relative;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      padding-bottom: 120px;
+      order: -1;
+    }
   }
 
   &__text {
@@ -77,17 +126,32 @@
   }
 
   &__descr {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: auto;
+    position: relative;
     text-transform: uppercase;
     padding: 50px 50px 50px 30px;
+    width: 730px;
+    background: linear-gradient(89.68deg, #FBFBFB 49.07%, rgba(251, 251, 251, 0) 97.72%);
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      padding: 25px 0 25px 35px;
+    }
   }
 
-  .btn-secondary {
-    box-shadow: none;
-    margin-top: 170px;
-    padding: 22px 35px;
+  &__text {
+    font-weight: 700;
+    font-size: 24px;
+
+    @media (max-width: 576px) {
+      font-size: 20px;
+    }
+  }
+
+  &__btn-main {
+
+    &--light {
+      position: relative;
+      bottom: -40px;
+    }
   }
 }
