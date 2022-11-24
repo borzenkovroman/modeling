@@ -47,15 +47,15 @@
         display: none;
       }
     }
+  }
 
-    &-title {
-      padding: 30px 15px;
-      text-align: center;
-      color: $white;
-      font-weight: 550;
-      font-size: 20px;
-      border: 1px solid #B2B2B2;
-    }
+  &__item-title {
+    padding: 30px 15px;
+    text-align: center;
+    color: $white;
+    font-weight: 550;
+    font-size: 20px;
+    border: 1px solid #B2B2B2;
   }
 
   &__img {

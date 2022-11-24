@@ -11,6 +11,7 @@ body {
   font-family: 'HelveticaNeueCyr', sans-serif;
   font-weight: 300;
   letter-spacing: normal;
+  font-style: normal;
   background-color: #FCFCFC;
 }
 
@@ -81,11 +82,12 @@ body {
   }
 }
 
-a {
+.link {
   font-size: 14px;
   line-height: 1.45;
   font-weight: 300;
   color: $default;
+  text-decoration: none;
 }
 
 .title {
@@ -102,12 +104,6 @@ a {
     font-style: italic;
     letter-spacing: 0;
   }
-}
-
-button {
-  text-transform: uppercase;
-  font-size: 14px;
-  font-style: normal;
 }
 
 .slick-icon {
@@ -157,6 +153,8 @@ button {
 
 .btn-main {
   background-color: $default;
+  text-transform: uppercase;
+  font-size: 14px;
   padding: 22px 44px;
   font-weight: 550;
   color: $white;
