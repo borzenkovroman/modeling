@@ -68,72 +68,69 @@
     }
   }
 
-  &__contact {
+  &__contact-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 40px;
 
-    &-title {
-      text-transform: uppercase;
-      font-size: 30px;
-      margin-bottom: 40px;
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__contact-inner {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      column-gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__contact-item {
+
+    &:not(:last-child) {
+      margin-right: 80px;
 
       @media (max-width: 768px) {
-        margin-bottom: 30px;
+        margin-right: 30;
+      }
+
+      @media (max-width: 576px) {
+        margin-right: 0;
+        margin-bottom: 20;
       }
     }
+  }
 
-    &-inner {
-      display: flex;
-      align-items: center;
+  &__contact-link {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
 
-      @media (max-width: 768px) {
-        column-gap: 40px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+    @media (max-width: 768px) {
+      font-size: 20px;
     }
 
-    &-item {
-      
-      &:not(:last-child) {
-        margin-right: 80px;
-
-        @media (max-width: 768px) {
-          margin-right: 30;
-        }
-
-        @media (max-width: 576px) {
-          margin-right: 0;
-          margin-bottom: 20;
-        }
-      }
+    &:hover {
+      color: $accent;
     }
 
-    &-link {
-      display: flex;
-      align-items: center;
-      font-size: 24px;
-
-      @media (max-width: 768px) {
-        font-size: 20px;
-      }
-
-      &:hover {
-        color: $accent;
-      }
-
-      &:active {
-        background-color: $accent;
-        color: $white;
-      }
-      
-      &:focus {
-        outline: 1px solid $accent;
-        outline-offset: 6px;
-      }
+    &:active {
+      background-color: $accent;
+      color: $white;
     }
 
-    &-icon {
-      margin-right: 12px;
+    &:focus {
+      outline: 1px solid $accent;
+      outline-offset: 6px;
     }
+  }
+
+  &__contact-icon {
+    margin-right: 12px;
   }
 
   &__img {

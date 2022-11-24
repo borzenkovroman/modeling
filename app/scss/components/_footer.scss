@@ -9,27 +9,25 @@
     align-items: center;
 
     .logo {
+      display: block;
 
       @media (max-width: 768px) {
         display: block;
         margin-bottom: 30px;
       }
 
+      &:focus {
+        outline: 1px solid $white;
+        outline-offset: 6px;
+      }
+      
       &:hover {
         opacity: 0.5;
       }
-
+      
       &:active {
         opacity: 1;
       }
-
-      &:focus {
-        outline: 1px solid $default;
-        outline-offset: 6px;
-      }
-    }
-
-    &__wrapper {
 
     }
 
@@ -39,10 +37,6 @@
       @media (max-width: 768px) {
         display: block;
       }
-    }
-
-    &__info-item {
-
     }
 
     &__info-text {
@@ -97,7 +91,9 @@
       position: relative;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      transition: all 0.3s ease-in-out;
+      transition: background-position 0.3s ease-in-out,
+                  outline 0.3s,
+                  background-image 0.3s;
 
       @media (max-width: 576px) {
         font-size: 13px;
@@ -112,15 +108,21 @@
         left: 0;
         width: 0;
         height: 3px;
-        transition: all 0.3s ease-in-out;
+        transition: width 0.3s ease-in-out,
+                    background-color 0.3s;
       }
 
-      &:hover::after {
-        width: 100%;
+      &:focus {
+        outline: 1px solid $white;
+        outline-offset: 6px;
       }
 
       &:hover {
         background-position: 0;
+
+        &::after {
+          width: 100%;
+        }
       }
 
       &:active {
@@ -128,22 +130,10 @@
             $footer,
             $footer 50%,
             $brown 50%);
-        background-size: 200% 100%;
-        background-position: -100%;
-        display: inline-block;
-        position: relative;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transition: all 0.3s ease-in-out;
-      }
 
-      &:active::after {
-        background: $brown;
-      }
-
-      &:focus {
-        outline: 1px solid $white;
-        outline-offset: 6px;
+        &::after {
+          background-color: $brown;
+        }
       }
     }
 
@@ -151,9 +141,18 @@
       font-weight: 550;
       position: relative;
       color: $white;
+      transition: color 0.4s,
+                  transform 0.7s,
+                  outline 0.4s;
 
       @media (max-width: 768px) {
         display: none;
+      }
+
+      &:focus {
+        outline: 1px solid $white;
+        outline-offset: 6px;
+        border-radius: 4px;
       }
 
       &:hover {
@@ -164,35 +163,6 @@
       &:active {
         transform: scale(1.2);
         color: $white;
-      }
-
-      &::after {
-        content: '';
-        background-image: url('../images/icons/tel.svg');
-        width: 24px;
-        height: 24px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: -30px;
-        display: none;
-      }
-
-      &:active::after {
-        display: block;
-      }
-
-      &:hover {
-        transform: scale(1.2);
-        color: $accent;
-      }
-
-      &:focus {
-        outline: 1px solid $white;
-        outline-offset: 6px;
       }
     }
   }
