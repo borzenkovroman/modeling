@@ -1,7 +1,6 @@
 html,
 body {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -27,6 +26,7 @@ body {
   min-height: 100%;
   opacity: 0.4;
   z-index: -2;
+  overflow-x: hidden;
 }
 
 .container {
@@ -87,8 +87,6 @@ body {
     min-width: 130%;
     height: 60px;
     transform: translate(-50%, -50%);
-
-
   }
 }
 
