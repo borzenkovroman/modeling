@@ -45,6 +45,10 @@ svg {
   display: block;
 }
 
+select,
+textarea {
+  border: none;
+}
 
 button {
   border: none;
@@ -52,9 +56,4 @@ button {
   cursor: pointer;
   background-color: transparent;
   padding: 0;
-}
-
-select,
-textarea {
-  bottom: none;
 }

@@ -13,6 +13,10 @@ body {
   letter-spacing: normal;
   font-style: normal;
   background-color: #FCFCFC;
+
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .noise-bg {
@@ -32,18 +36,18 @@ body {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 70px 0;
 
   @media (max-width: 1200px) {
-    padding: 70px 0;
-  }
-
-  @media (max-width: 768px) {
     padding: 50px 0;
   }
 
+  @media (max-width: 768px) {
+    padding: 30px 0;
+  }
+
   @media (max-width: 576px) {
-    padding: 35px 0;
+    padding: 20px 0;
   }
 }
 
@@ -61,11 +65,15 @@ body {
 }
 
 .int {
-  transition: background-color .5s,
-              transform .5s,
-              opacity .5s,
-              outline .5s,
-              border-color .5s;
+  transition: background-color 0.5s,
+              transform 0.5s,
+              opacity 0.5s,
+              outline 0.5s,
+              border-color 0.5s,
+              color 0.5s,
+              border-radius 0.5s,
+              display 0.5s,
+              box-shadow 0.5s;
 }
 
 .click-area {
@@ -79,6 +87,8 @@ body {
     min-width: 130%;
     height: 60px;
     transform: translate(-50%, -50%);
+
+
   }
 }
 
@@ -106,12 +116,29 @@ body {
   }
 }
 
+.logo {
+  
+  &:focus {
+    outline: 1px solid $default;
+    outline-offset: 6px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
 .slick-icon {
   fill: $default;
 }
 
 .slick-arrow {
   position: relative;
+  z-index: 1;
 
   &::before {
     content: '';
@@ -122,11 +149,22 @@ body {
     height: 60px;
     transform: translate(-50%, -50%);
     z-index: -1;
+    transition: background-color 0.4s,
+                outline 0.4s;
+
+    @media (max-width: 992px) {
+      min-width: 50px;
+    }
+
+    @media (max-width: 360px) {
+      min-width: 30px;
+    }
   }
 
   &:hover {
 
     .slick-icon {
+      transition: fill 0.4s;
       fill: $white;
     }
   }
@@ -162,17 +200,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: border-radius 0.5s,
-              box-shadow 0.5s
-              background-color 0.5s,
-              display 0.5s,
-              color 0.5s;
+
+  @media (max-width: 992px) {
+    font-size: 12px;
+  }
 
   @media (max-width: 768px) {
     padding: 20px 20px;
   }
 
+  @media (max-width: 768px) and (orientation: landscape) {
+    padding: 13px 13px;
+  }
+
   &__icon {
+    transition: fill 0.5s;
     fill: $white;
     margin-left: 10px;
   }
@@ -257,6 +299,10 @@ body {
       padding: 20px 20px;
     }
 
+    @media (max-width: 576px) {
+      padding: 15px 15px;
+    }
+
     &:hover {
       background-color: transparent;
       border-radius: 20px 0 20px 0;
@@ -278,7 +324,7 @@ body {
       background-color: transparent;
       border-radius: 0 20px 0 20px;
       outline: 3px double $brown;
-      color: $white;
+      color: $brown;
     }
 
     @media (max-width: 576px) {
@@ -296,6 +342,11 @@ body {
   align-items: flex-end;
   line-height: 1;
   position: relative;
+
+  @media (max-width: 576px) {
+    font-size: 30px;
+    min-width: 105px;
+  }
 
   &__top {
     position: absolute;

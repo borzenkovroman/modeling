@@ -83,7 +83,7 @@
     align-items: center;
 
     @media (max-width: 768px) {
-      column-gap: 40px;
+      gap: 40px;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -110,8 +110,19 @@
     align-items: center;
     font-size: 24px;
 
+    &::before {
+
+      @media (max-width: 576px) {
+        min-width: 100%;
+      }
+    }
+
     @media (max-width: 768px) {
       font-size: 20px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 16px;
     }
 
     &:hover {
@@ -135,13 +146,12 @@
 
   &__img {
     padding: 0 90px 90px 0;
+    object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: auto;
 
     @media (max-width: 576px) {
-      min-width: 230px;
-      height: auto;
-      object-fit: cover;
+      padding: 18px 52px 52px 0;
     }
 
     &-wrapper {
@@ -162,10 +172,11 @@
         z-index: -1;
         
         @media (max-width: 576px) {
+          background-image: url('../images/priority/net-mob.svg');
+          max-width: 241px;
+          width: 100%;
+          height: 241px;
           background-size: contain;
-          min-width: 240px;
-          height: auto;
-          top: 0;
         }
       }
 

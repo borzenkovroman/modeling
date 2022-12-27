@@ -1,5 +1,4 @@
 .product {
-  padding-top: 200px;
 
   &__title {
     margin-bottom: 80px;
@@ -13,10 +12,22 @@
       font-size: 35px;
       margin-bottom: 45px;
     }
+
+    @media (max-width: 576px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 320px) {
+      font-size: 26px;
+    }
   }
 
   &__gallery {
     margin-bottom: 195px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 145px;
+    }
 
     @media (max-width: 576px) {
       margin-bottom: 50px;
@@ -54,25 +65,29 @@
       bottom: -95px;
 
       @media (max-width: 576px) {
-        top: -114%;
+        top: -70px;
+        bottom: auto;
       }
     }
 
     .slick-prev {
       left: 44%;
-      transform: translateX(-44%);
 
       @media (max-width: 576px) {
-        left: 80%;
+        left: auto;
+        right: 50px;
+      }
+
+      @media (max-width: 360px) {
+        right: 30px;
       }
     }
 
     .slick-next {
       right: 44%;
-      transform: translateX(-44%);
 
       @media (max-width: 576px) {
-        right: 5%;
+        right: 0;
       }
     }
   }
@@ -82,10 +97,9 @@
     min-width: 100%;
     min-height: 100%;
 
-    @media (max-width: 576px) {
+    @media (max-width: 992px) {
       object-fit: contain;
-      max-width: 139px;
-      width: 100%;
+      max-width: 100%;
       height: auto;
     }
   }
@@ -99,7 +113,8 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      column-gap: 200px;
+      column-gap: 250px;
+      margin-bottom: 50px;
     }
   }
 
@@ -142,7 +157,6 @@
 
     &__wrapper {
       display: flex;
-      justify-content: space-between;
 
       @media (max-width: 1200px) {
         flex-wrap: wrap;
@@ -162,14 +176,17 @@
         margin-right: 0;
       }
 
-      @media (max-width: 567px) {
+      @media (max-width: 576px) {
         min-width: 100%;
+        padding-bottom: 130px;
       }
     }
 
 
     &__title {
       margin-bottom: 35px;
+      max-width: 540px;
+      width: 100%;
 
       @media (max-width: 1200px) {
         font-size: 40px;
@@ -182,7 +199,7 @@
 
     &__info {
       margin-bottom: 40px;
-      max-width: 560px;
+      max-width: 520px;
       width: 100%;
     }
 
@@ -211,7 +228,7 @@
 
       @media (max-width: 576px) {
         width: 100%;
-        padding: 10px 0 10px 25px;
+        padding: 10px 0 10px 10px;
       }
     }
 
@@ -220,7 +237,7 @@
       font-size: 24px;
 
       @media (max-width: 576px) {
-        font-size: 20px;
+        font-size: 16px;
       }
     }
 
@@ -262,7 +279,7 @@
         @media (max-width: 576px) {
           max-width: 123px;
           height: auto;
-          right: 5%;
+          right: 35%;
           background-size: contain;
         }
       }
@@ -307,51 +324,39 @@
           background-image: url('../images/carousel/capacin-bottom-bg.jpg');
         }
       }
+    }
 
-      .slick-icon {
-        fill: $default;
-      }
+    .slick-next {
+      right: 38%;
 
-      .slick-arrow {
-        position: absolute;
-        bottom: 10px;
-
-        @media (max-width: 1200px) {
-          bottom: -10%;
-        }
-
-        @media (max-width: 576px) {
-          bottom: -140%;
-          top: 0;
-        }
-
-        &::before {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          min-width: 100px;
-          height: 60px;
-          transform: translate(-50%, -50%);
-        }
-      }
-
-      .slick-prev {
-        left: 45%;
-        transform: translateX(-45%);
-
-        @media (max-width: 576px) {
-          left: 35%;
-        }
-      }
-
-      .slick-next {
+      @media (max-width: 768px) {
         right: 30%;
-        transform: translateX(-30%);
+      }
 
-        @media (max-width: 576px) {
-          right: 35%;
-        }
+      @media (max-width: 576px) {
+        left: 120px;
+        right: auto;
+      }
+    }
+
+    .slick-prev {
+      left: 38%;
+
+      @media (max-width: 768px) {
+        right: auto;
+        left: 30%;
+      }
+
+      @media (max-width: 576px) {
+        left: 60px;
+      }
+    }
+
+    .slick-arrow {
+
+      @media (max-width: 768px) {
+        bottom: -40px;
+        top: auto;
       }
     }
 
@@ -386,9 +391,9 @@
         max-width: 234px;
         width: 100%;
         min-height: 234px;
-        left: 50%;
+        left: 0;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateY(-50%);
       }
     }
 

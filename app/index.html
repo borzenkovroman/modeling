@@ -5,6 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>modeling | rendering | animation</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#B2B2B2">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -12,46 +19,48 @@
   <section class="hero section" id="home">
     <div class="container">
       <header class="header">
-        <nav class="menu">
-          <button class="menu__btn int" type="button">
-            <span class="menu__line"></span>
-            <span class="sr-only">open main menu</span>
-          </button>
+        <div class="header__wrapper">
+          <nav class="header-menu">
+            <button class="header-menu__btn int" type="button">
+              <span class="header-menu__line"></span>
+              <span class="sr-only">open main menu</span>
+            </button>
 
-          <a class="logo click-area int" href="#home">
-            <img src="./images/logo.svg" alt="modeling logo" width="110" height="27">
-          </a>
-
-          <a class="logo logo__menu click-area int" href="#home">
-            <img src="./images/logo-white.svg" alt="modeling logo" width="110" height="27">
-          </a>
-
-          <div class="menu__inner">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link click-area int link" href="#product">
-                  Our work
-                </a> 
-              </li>
-    
-              <li class="menu__item">
-                <a class="menu__link click-area int link" href="#prices">
-                  Services and prices
-                </a>
-              </li>
-    
-              <li class="menu__item">
-                <a class="menu__link click-area int link" href="#contact">
-                  Contacts
-                </a>
-              </li>
-            </ul>
-    
-            <a class="menu__contact click-area int link" href="tel:+79878373829">
-              +7 (987) 837-38-29
+            <a class="logo click-area int" href="#home">
+              <img src="./images/logo.svg" alt="modeling logo" width="110" height="27">
             </a>
-          </div>
-        </nav>
+
+            <a class="logo header-menu__logo click-area int" href="#home">
+              <img src="./images/logo-white.svg" alt="modeling logo" width="110" height="27">
+            </a>
+
+            <div class="header-menu__inner">
+              <ul class="header-menu__list">
+                <li class="header-menu__item">
+                  <a class="header-menu__link click-area int link" href="#product">
+                    Our work
+                  </a> 
+                </li>
+      
+                <li class="header-menu__item">
+                  <a class="header-menu__link click-area int link" href="#prices">
+                    Services and prices
+                  </a>
+                </li>
+      
+                <li class="header-menu__item">
+                  <a class="header-menu__link click-area int link" href="#contact">
+                    Contacts
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <a class="header-menu__contact click-area int link" href="tel:+79878373829">
+            +7 (987) 837-38-29
+          </a>
+        </div>
       </header>
 
       <div class="hero__content">
@@ -127,7 +136,11 @@
           </div>
 
           <div class="about__thumb">
-            <img class="about__img" src="./images/about/team.jpg" alt="members of our team" width="459" height="405">
+            <picture>
+              <source srcset="./images/about/team.jpg" media="(min-width: 576px)">
+              <source srcset="./images/about/team-mob.jpg" media="(max-width: 576px)">
+              <img class="about__img" src="./images/about/team.jpg" alt="members of our team" width="459" height="405">
+            </picture>
           </div>
         </div>
 
@@ -154,7 +167,7 @@
       </div>
     </section>
 
-    <section class="product" id="product">
+    <section class="product section" id="product">
       <div class="container">
         <h2 class="product__title title">
             Our
@@ -168,83 +181,78 @@
           <div class="product__item">
             <ul class="product__grid">
               <li class="product__cell product__cell--big">
-                <picture>
-                  <source srcset="./images/product/watch-1-mob.jpg 1x, ./images/product/watch-1-mob-2x.jpg 2x" media="(max-width:786px)">
-
-
-                  <img class="product__img" src="./images/product/watch-1.jpg"
-                    alt="3d model of the watch main image" width="520" height="520">
-                </picture>
+                <img class="product__img" src="./images/product/watch-1.jpg"
+                alt="3d model of the watch main image" width="520" height="520">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/watch-2.jpg"
-                  alt="watch face" width="250" height="250">
+                alt="watch face" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/watch-3.jpg"
-                  alt="watch belt" width="250" height="250">
+                alt="watch belt" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/watch-4.jpg"
-                  alt="watch pulse sensor" width="250" height="250">
+                alt="watch pulse sensor" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/watch-5.jpg"
-                  alt="watch time controller buttons" width="250" height="250">
+                alt="watch time controller buttons" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/filter-1.jpg"
-                  alt="3d model of the water filter, view of the enter for the water" width="250" height="250">
+                alt="3d model of the water filter, view of the enter for the water" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/filter-2.jpg"
-                  alt="side instractions for the filter" width="250" height="250">
+                alt="side instractions for the filter" width="250" height="250">
               </li>
-
+              
               <li class="product__cell product__cell--small">
                 <img class="product__img" src="./images/product/filter-3.jpg"
-                  alt="water filter main image" width="520" height="520">
+                alt="water filter main image" width="520" height="520">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/filter-4.jpg"
-                  alt="inside stracture of the water filter" width="250" height="250">
+                alt="inside stracture of the water filter" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/filter-5.jpg"
-                  alt="water filter cap" width="250" height="250">
+                alt="water filter cap" width="250" height="250">
               </li>
-
+              
               <li class="product__cell product__cell--big">
                 <img class="product__img" src="./images/product/printer-1.jpg"
-                  alt="3d printer" width="520" height="520">
+                alt="3d printer" width="520" height="520">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/printer-2.jpg"
-                  alt="cooler of the printer" width="250" height="250">
+                alt="cooler of the printer" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/printer-3.jpg"
-                  alt="inside stracture of the cooler" width="250" height="250">
+                alt="inside stracture of the cooler" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/printer-4.jpg"
-                  alt="printers rail" width="250" height="250">
+                alt="printers rail" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/printer-5.jpg"
-                  alt="printing material" width="250" height="250">
+                alt="printing material" width="250" height="250">
               </li>
             </ul>
           </div>
@@ -253,62 +261,62 @@
             <ul class="product__grid">
               <li class="product__cell product__cell--big">
                 <img class="product__img" src="./images/product/usb-1.jpg"
-                  alt="two usb adaptors" width="520" height="520">
+                alt="two usb adaptors" width="520" height="520">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/usb-2.jpg"
-                  alt="usb adaptor's nest" width="250" height="250">
+                alt="usb adaptor's nest" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/usb-3.jpg"
-                  alt="usb adaptor's mother nest" width="250" height="250">
+                alt="usb adaptor's mother nest" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/usb-4.jpg"
-                  alt="usb adaptor's father nest" width="250" height="250">
+                alt="usb adaptor's father nest" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/usb-5.jpg"
-                  alt="the stracture of the mother's nest" width="250" height="250">
+                alt="the stracture of the mother's nest" width="250" height="250">
               </li>
-
+              
               <li class="product__cell product__cell--big">
                 <img class="product__img" src="./images/product/coffee-1.jpg"
-                  alt="3d coffee machine made a cup of coffee" width="520" height="520">
+                alt="3d coffee machine made a cup of coffee" width="520" height="520">
               </li>
-
+              
               <li class="product__cell product__cell--small">
                 <img class="product__img" src="./images/product/coffee-2.jpg"
-                  alt="3d coffee machine on the kitchen" width="520" height="520">
+                alt="3d coffee machine on the kitchen" width="520" height="520">
               </li>
-
+              
               <li class="product__cell product__cell--big">
                 <img class="product__img" src="./images/product/razor-1.jpg"
-                  alt="3d razors are presented in different colors" width="520" height="520">
+                alt="3d razors are presented in different colors" width="520" height="520">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/razor-2.jpg"
-                  alt="red variant of the razor" width="250" height="250">
+                alt="red variant of the razor" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/razor-3.jpg"
-                  alt="blue variant of the razor" width="250" height="250">
+                alt="blue variant of the razor" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/razor-4.jpg"
-                  alt="black variant of the razor" width="250" height="250">
+                alt="black variant of the razor" width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/razor-5.jpg"
-                  alt="whole collection of razors in different colors" width="250" height="250">
+                alt="whole collection of razors in different colors" width="250" height="250">
               </li>
             </ul>
           </div>
@@ -317,63 +325,63 @@
             <ul class="product__grid">
               <li class="product__cell product__cell--big">
                 <img class="product__img" src="./images/product/earpods-1.jpg" alt="earpods charging box"
-                  width="520" height="520">
+                width="520" height="520">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/earpods-2.jpg" alt="earpods black edition"
-                  width="250" height="250">
+                width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/earpods-3.jpg" alt="earpods are strongly fixed in the charging box"
-                  width="250" height="250">
+                width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/earpods-4.jpg" alt="transportational packaging of the earpods"
-                  width="250" height="250">
+                width="250" height="250">
               </li>
 
               <li class="product__cell">
                 <img class="product__img" src="./images/product/earpods-5.jpg"
-                  alt="earpods are strongly fixed in the charging box"
-                  width="250" height="250">
+                alt="earpods are strongly fixed in the charging box"
+                width="250" height="250">
               </li>
-
+              
               <li class="product__cell product__cell--big">
                 <img class="product__img" src="./images/product/holder-1.jpg" alt="phone holder was been fixed for the table"
-                  width="520" height="520">
+                width="520" height="520">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/holder-2.jpg" alt="phone holder floats in the air"
-                  width="250" height="250">
+                width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/holder-3.jpg" alt="compact and easy to reinstall phone holder"
-                  width="250" height="250">
+                width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/holder-4.jpg" alt="phone holder floats in the air"
-                  width="250" height="250">
+                width="250" height="250">
               </li>
-
+              
               <li class="product__cell">
                 <img class="product__img" src="./images/product/holder-5.jpg" alt="two perfect phone holders"
-                  width="250" height="250">
+                width="250" height="250">
               </li>
-
+              
               <li class="product__cell product__cell--big">
                 <img class="product__img" src="./images/product/soap.jpg" alt="volume conditioner for essential hair recovery" width="520"
-                  height="520">
+                height="520">
               </li>
-
+              
               <li class="product__cell product__cell--small">
                 <img class="product__img" src="./images/product/lighter.jpg" alt="powerful LED flashlight black edition" width="520"
-                  height="520">
+                height="520">
               </li>
             </ul>
           </div>
@@ -388,7 +396,7 @@
             </svg>
           </button>
 
-          <button class="product__btn-main btn-main btn-main--light int" type="button">
+          <button class="product__btn-main btn-main--light int" type="button">
             Prices
           </button> 
         </div>
@@ -401,12 +409,12 @@
                   <div class="product-card__inner">
                     <h3 class="product-card__title title">
                       3d product
-
+  
                       <span class="title__part">
                         rendering
                       </span>
                     </h3>
-
+                    
                     <div class="product-card__info">
                       <p class="product-card__info-text">
                         Do you want to get an exact 3D copy or individual images
@@ -475,7 +483,7 @@
                   <div class="product-card__inner">
                     <h3 class="product-card__title title">
                       3d package
-
+  
                       <span class="title__part">
                         rendering
                       </span>
@@ -487,12 +495,12 @@
                         trade-show banners, magazines, and much more.
                         <br>We can use your 2D label artwork files to quickly create high-quality
                         and accurate renderings of your product, ready for publication.
-                        <p>
+                      <p>
 
-                          <p class="product-card__info-text">
-                            Overpriced photo shoots of your product packaging for advertising
-                            and e-commerce are no longer necessary.
-                          </p>
+                      <p class="product-card__info-text">
+                        Overpriced photo shoots of your product packaging for advertising
+                        and e-commerce are no longer necessary.
+                      </p>
                     </div>
 
                     <button class="product-card__btn-main btn-main int" type="button">
@@ -545,7 +553,7 @@
                   <div class="product-card__inner">
                     <h3 class="product-card__title title">
                       3d product
-
+  
                       <span class="title__part">
                         animation
                       </span>
@@ -584,9 +592,9 @@
                     <a data-fancybox class="product-card__video-link click-area int"
                       href="https://www.youtube.com/watch?v=MUOV0dp2eqo&t=4s"
                       style="background-image: url('../images/video/watch.jpg');">
+                      <div class="sr-only">tap to watch review about Audemars Piguet Watch</div>
                       <button class="product-card__video-popup int" type="button"
                         style="background-image: url('../images/video/popup.svg');">
-
                       </button>
                     </a>
                   </div>
@@ -885,7 +893,11 @@
           </div>
 
           <div class="priority__img-wrapper">
-            <img class="priority__img" src="images/priority/priority.jpg" alt="working process" width="448" height="329">
+            <picture>
+              <source srcset="./images/priority/priority.jpg" media="(min-width: 576px)">
+              <source srcset="./images/priority/priority-mob.jpg" media="(max-width: 576px)">
+              <img class="priority__img" src="images/priority/priority.jpg" alt="working process" width="448" height="329">
+            </picture>
           </div>
         </div>
       </div>
@@ -943,7 +955,7 @@
               </p>
             </div>
 
-            <button class="contact__btn-main--light btn-main  btn-main--light int" type="button">
+            <button class="contact__btn-main--light  btn-main--light int" type="button">
               Schedule
             </button>
           </div>
@@ -954,53 +966,55 @@
 
   <footer class="footer">
     <div class="container">
-      <nav class="menu">
-        <div class="menu__wrapper">
-          <a class="logo click-area int" href="#home">
-            <img src="images/logo-white.svg" alt="company logo" width="110" height="27">
-          </a>
+      <div class="footer__inner">
+        <nav class="footer-menu">
+          <div class="footer-menu__wrapper">
+            <a class="logo footer-menu__logo click-area int" href="#home">
+              <img src="images/logo-white.svg" alt="company logo" width="110" height="27">
+            </a>
 
-          <ul class="menu__info">
-            <li class="menu__info-item">
-              <span class="menu__info-text">
-                © 2022 Product 3D
-              </span>
-            </li>
+            <ul class="footer-menu__info">
+              <li class="footer-menu__info-item">
+                <span class="footer-menu__info-text">
+                  © 2022 Product 3D
+                </span>
+              </li>
 
-            <li class="menu__info-item">
-              <span class="menu__info-text">
-                Privacy policy
-              </span>
-            </li>
-          </ul>
-        </div>
+              <li class="footer-menu__info-item">
+                <span class="footer-menu__info-text">
+                  Privacy policy
+                </span>
+              </li>
+            </ul>
+          </div>
 
-        <div class="menu__inner">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link click-area int link" href="#">
-                Our work
-              </a>
-            </li>
+          <div class="footer-menu__inner">
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link click-area int link" href="#">
+                  Our work
+                </a>
+              </li>
 
-            <li class="menu__item">
-              <a class="menu__link click-area int link" href="#">
-                Services and prices
-              </a>
-            </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link click-area int link" href="#">
+                  Services and prices
+                </a>
+              </li>
 
-            <li class="menu__item">
-              <a class="menu__link click-area int link" href="#">
-                Contacts
-              </a>
-            </li>
-          </ul>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link click-area int link" href="#">
+                  Contacts
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-          <a class="menu__contact click-area int link" href="tel:+79878373829">
-            +7 (987) 837-38-29
-          </a>
-        </div>
-      </nav>
+        <a class="footer-menu__contact click-area int link" href="tel:+79878373829">
+          +7 (987) 837-38-29
+        </a>
+      </div>
     </div>
   </footer>
 

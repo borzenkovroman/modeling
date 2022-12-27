@@ -2,168 +2,160 @@
   padding: 57px 0 57px;
   background-color: $default;
   color: $white;
-  
-  .menu {
+
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
 
-    .logo {
+.footer-menu {
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 2;
+
+  &__logo {
+
+    @media (max-width: 768px) {
       display: block;
+      margin-bottom: 30px;
+    }
+  }
 
-      @media (max-width: 768px) {
-        display: block;
-        margin-bottom: 30px;
-      }
+  &__info {
+    display: none;
 
-      &:focus {
-        outline: 1px solid $white;
-        outline-offset: 6px;
-      }
-      
-      &:hover {
-        opacity: 0.5;
-      }
-      
-      &:active {
-        opacity: 1;
-      }
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
 
+  &__info-text {
+    font-size: 10px;
+    font-weight: 100;
+    color: $footer;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__list {
+    margin-right: 110px;
+    display: flex;
+
+    @media (max-width: 992px) {
+      margin-right: 50px;
     }
 
-    &__info {
+    @media (max-width: 768px) {
+      margin-right: 0;
+      flex-direction: column;
+      text-align: right;
+    }
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @media (max-width: 768px) {
+        margin-right: 0;
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  &__link {
+    background-image: linear-gradient(to right,
+        $accent,
+        $accent 50%,
+        $white 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    font-size: 15px;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.3s ease-in-out,
+      outline 0.3s,
+      background-image 0.3s;
+
+    @media (max-width: 576px) {
+      font-size: 13px;
+    }
+
+    &:after {
+      content: '';
+      background: $accent;
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      transition: width 0.3s ease-in-out,
+        background-color 0.3s;
+    }
+
+    &:focus {
+      outline: 1px solid $white;
+      outline-offset: 6px;
+    }
+
+    &:hover {
+      background-position: 0;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:active {
+      background-image: linear-gradient(to left,
+          $footer,
+          $footer 50%,
+          $brown 50%);
+
+      &::after {
+        background-color: $brown;
+      }
+    }
+  }
+
+  &__contact {
+    font-weight: 550;
+    position: relative;
+    color: $white;
+    transition: color 0.4s,
+      transform 0.7s,
+      outline 0.4s;
+
+    @media (max-width: 768px) {
       display: none;
-
-      @media (max-width: 768px) {
-        display: block;
-      }
     }
 
-    &__info-text {
-      font-size: 10px;
-      font-weight: 100;
-      color: $footer;
+    &:focus {
+      outline: 1px solid $white;
+      outline-offset: 6px;
+      border-radius: 4px;
     }
 
-    &__inner {
-      display: flex;
+    &:hover {
+      transform: scale(1.2);
+      color: $accent;
     }
 
-    &__list {
-      margin-right: 110px;
-      display: flex;
-
-      @media (max-width: 992px) {
-        margin-right: 50px;
-      }
-
-      @media (max-width: 768px) {
-        margin-right: 0;  
-        flex-direction: column;
-        text-align: right;
-      }
-    }
-
-    &__item {
-      font-weight: 400;
-      font-size: 15px;
-      text-transform: uppercase;
-
-      &:not(:last-child) {
-        margin-right: 30px;
-
-        @media (max-width: 768px) {
-          margin-right: 0;
-          margin-bottom: 14px;
-        }
-      }
-    }
-
-    &__link {
-      background-image: linear-gradient(to right,
-          $accent,
-          $accent 50%,
-          $white 50%);
-      background-size: 200% 100%;
-      background-position: -100%;
-      display: inline-block;
-      font-size: 15px;
-      position: relative;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: background-position 0.3s ease-in-out,
-                  outline 0.3s,
-                  background-image 0.3s;
-
-      @media (max-width: 576px) {
-        font-size: 13px;
-      }  
-
-      &:after {
-        content: '';
-        background: $accent;
-        display: block;
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        width: 0;
-        height: 3px;
-        transition: width 0.3s ease-in-out,
-                    background-color 0.3s;
-      }
-
-      &:focus {
-        outline: 1px solid $white;
-        outline-offset: 6px;
-      }
-
-      &:hover {
-        background-position: 0;
-
-        &::after {
-          width: 100%;
-        }
-      }
-
-      &:active {
-        background-image: linear-gradient(to left,
-            $footer,
-            $footer 50%,
-            $brown 50%);
-
-        &::after {
-          background-color: $brown;
-        }
-      }
-    }
-
-    &__contact {
-      font-weight: 550;
-      position: relative;
+    &:active {
+      transform: scale(1.2);
       color: $white;
-      transition: color 0.4s,
-                  transform 0.7s,
-                  outline 0.4s;
-
-      @media (max-width: 768px) {
-        display: none;
-      }
-
-      &:focus {
-        outline: 1px solid $white;
-        outline-offset: 6px;
-        border-radius: 4px;
-      }
-
-      &:hover {
-        transform: scale(1.2);
-        color: $accent;
-      }
-
-      &:active {
-        transform: scale(1.2);
-        color: $white;
-      }
     }
   }
 }
